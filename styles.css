@@ -19,9 +19,8 @@ body {
     left: 0;
     right: 5%;
     background-color: rgba(0, 0, 0, 0.8);
-    color: white;
     text-align: right;
-    padding: 10px 0;
+    padding: 5px 0;
     font-family: "Tiro Devanagari Hindi", serif;
     font-size: 1rem;
     transform: translateY(-100%);
@@ -40,17 +39,18 @@ body {
 
 .name {
     font-family: "Tiro Devanagari Hindi", serif;
-    font-size: 5rem;
+    font-size: 5.5rem;
     font-weight: 400;
-    margin: 0%;
-    margin-bottom: 0%;
-    margin-top: 0%;
     color: #2b59c3;
+}
+.title, .name {
+    margin: 0;
+    line-height: 1; /* Adjust as needed */
 }
 
 .subtitle {
     font-family: "Tiro Devanagari Hindi", serif;
-    font-size: 1.75rem;
+    font-size: 1.95rem;
     margin-top: 0%;
     margin-bottom: 0%;
     color: #b3c2f2;
@@ -63,8 +63,12 @@ body {
 }
 
 .about p {
-    font-size: 1rem;
-    margin-bottom: 10px;
+    font-family: "Tiro Devanagari Hindi", serif;
+    font-size: 1.5rem;
+    margin-top: 25%;
+    margin-bottom: 15%;
+    margin-right: 30%;
+    margin-left: 7.5%;
 }
 
 .profile-pic {
@@ -76,12 +80,13 @@ body {
 
 .projects, .skills, footer {
     margin-top: 30px;
+    margin-bottom: 100px;
 }
 
 .projects h2, .skills h2, footer h2 {
     font-family: "Tiro Devanagari Hindi", serif;
-    font-size: 1.5rem;
-    margin-bottom: 5px;
+    font-size: 2.5rem;
+    margin: 0;
 }
 
 .project-list {
@@ -103,6 +108,22 @@ body {
     color: white;
     font-size: 0.8rem;
     border-radius: 5px;
+}
+.description {
+    font-family: "Tiro Devanagari Hindi", serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #b3c2f2;
+    margin: 0;
+}
+/*vertical line*/
+.vl {
+  border-left: 6px solid white;
+  height: 350px;
+  position: absolute;
+  left: 7.5%;
+  margin-left: -3px;
+  top: 75%;
 }
 
 footer p {
