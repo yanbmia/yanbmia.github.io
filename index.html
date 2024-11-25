@@ -3,140 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mia Yan</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: black;
-            color: white;
-        }
-
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: black;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid white;
-            z-index: 1000;
-            display: none;
-        }
-
-        header a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            font-size: 1.5rem;
-        }
-
-        .content {
-            padding-top: 50px;
-            text-align: center;
-        }
-
-        .content h1 {
-            font-size: 3rem;
-            color: #3A4699;
-        }
-
-        .content img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin: 20px 0;
-        }
-
-        .projects, .skills, .contact {
-            margin: 50px 0;
-        }
-
-        .projects h2, .skills h2, .contact h2 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-
-        .project-icons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .project-icons a {
-            width: 100px;
-            height: 100px;
-            background-color: #8A004F;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        footer {
-            margin-top: 50px;
-            text-align: center;
-        }
-    </style>
+    <title>Mia Yan's Portfolio</title>
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <a href="#">Mia</a>
-    </header>
-
-    <div class="content">
-        <h1>hi, i'm mia yan</h1>
-        <p>and welcome to my website :)</p>
-        <img src="image.jpg" alt="Mia Yan">
-        <p>Currently, I'm a junior at New York University studying computer science and business.</p>
+    <!-- Dynamic Header -->
+    <div class="scroll-header">
+        <p>MIA</p>
     </div>
 
-    <div class="projects">
-        <h2>projects</h2>
-        <p>some things i done</p>
-        <div class="project-icons">
-            <a href="#">[project 1]</a>
-            <a href="#">[project 2]</a>
-            <a href="#">[project 3]</a>
-        </div>
+    <div class="container">
+        <header>
+            <h1 class="title">hi, i’m</h1>
+            <h1 class="name">mia yan</h1>
+            <h2 class="subtitle">and welcome</h2>
+            <h2 class="subtitle">to my website :)</h2>
+        </header>
+        <section class="about">
+            <p>Currently, I’m a junior at New York University studying computer science and business.</p>
+            <img src="your-photo.jpg" alt="Mia Yan" class="profile-pic">
+        </section>
+        <section class="projects">
+            <h2>projects</h2>
+            <p style="color: #b3c2f2;">some things i done</p>
+            <div class="project-list">
+                <div class="project-card">[project name]</div>
+                <div class="project-card">[project name]</div>
+                <div class="project-card">[project name]</div>
+            </div>
+        </section>
+        <section class="skills">
+            <h2>skills</h2>
+            <p style="color: #b3c2f2;">Python, Java, JavaScript, HTML, CSS<br>
+               Microsoft Office, Excel<br>
+               Adobe Creative Cloud, Figma
+            </p>
+        </section>
+        <footer>
+            <h2>find me @</h2>
+            <p>yanbmia@gmail.com<br>linkedin.com/in/yanbmia</p>
+        </footer>
     </div>
 
-    <div class="skills">
-        <h2>skills</h2>
-        <p>Python, Java, JavaScript, HTML, CSS</p>
-        <p>Microsoft Office, Excel</p>
-        <p>Adobe Creative Cloud, Figma</p>
-    </div>
-
-    <div class="contact">
-        <h2>find me @</h2>
-        <p>yanbmia@gmail.com</p>
-        <p><a href="https://linkedin.com/in/yanbmia" target="_blank" style="color:white;">linkedin.com/in/yanbmia</a></p>
-    </div>
-
-    <footer>
-        &copy; 2024 Mia Yan
-    </footer>
-
-    <script>
-        window.addEventListener("scroll", function () {
-            const header = document.querySelector("header");
-            if (window.scrollY > 100) {
-                header.style.display = "flex";
-            } else {
-                header.style.display = "none";
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

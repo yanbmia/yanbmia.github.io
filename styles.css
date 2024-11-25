@@ -1,0 +1,114 @@
+/* Apply the Tiro Devanagari Hindi font */
+body {
+    margin: 0;
+    font-family: "Tiro Devanagari Hindi", serif;
+    background-color: black;
+    color: white;
+    text-align: left;
+}
+
+.container {
+    padding: 5%;
+    padding-top: 15%;
+}
+
+/* Dynamic header styling */
+.scroll-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 5%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: right;
+    padding: 10px 0;
+    font-family: "Tiro Devanagari Hindi", serif;
+    font-size: 1rem;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+/* Rest of your CSS */
+.title {
+    font-family: "Tiro Devanagari Hindi", serif;
+    font-size: 4rem;
+    font-weight: 400;
+    margin: 0%;
+    margin-bottom: 0%;
+}
+
+.name {
+    font-family: "Tiro Devanagari Hindi", serif;
+    font-size: 5rem;
+    font-weight: 400;
+    margin: 0%;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    color: #2b59c3;
+}
+
+.subtitle {
+    font-family: "Tiro Devanagari Hindi", serif;
+    font-size: 1.75rem;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    color: #b3c2f2;
+    text-align: right;
+
+}
+
+.about {
+    margin-top: 20px;
+}
+
+.about p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.projects, .skills, footer {
+    margin-top: 30px;
+}
+
+.projects h2, .skills h2, footer h2 {
+    font-family: "Tiro Devanagari Hindi", serif;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.project-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.project-card {
+    font-family: "Tiro Devanagari Hindi", serif;
+    font-weight: 400;
+    width: 100px;
+    height: 100px;
+    background-color: #89043d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 5px;
+}
+
+footer p {
+    font-family: "Tiro Devanagari Hindi", serif;
+    margin-top: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #b3c2f2;
+}
