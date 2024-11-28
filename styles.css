@@ -1,114 +1,222 @@
-/* Apply the Tiro Devanagari Hindi font */
+/* General Reset */
+body, h1, h2, p, a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    font-family: "Tiro Devanagari Hindi", serif;
-    background-color: black;
-    color: white;
-    text-align: left;
+  font-family: "Inter", sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
 }
 
-.container {
-    padding: 5%;
-    padding-top: 15%;
+/* Inter Font Variations */
+.inter-thin {
+  font-weight: 100;
 }
 
-/* Dynamic header styling */
-.scroll-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 5%;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    text-align: right;
-    padding: 10px 0;
-    font-family: "Tiro Devanagari Hindi", serif;
-    font-size: 1rem;
-    transform: translateY(-100%);
-    transition: transform 0.3s ease-in-out;
-    z-index: 1000;
+.inter-light {
+  font-weight: 300;
 }
 
-/* Rest of your CSS */
-.title {
-    font-family: "Tiro Devanagari Hindi", serif;
-    font-size: 4rem;
-    font-weight: 400;
-    margin: 0%;
-    margin-bottom: 0%;
+.inter-regular {
+  font-weight: 400;
 }
 
-.name {
-    font-family: "Tiro Devanagari Hindi", serif;
-    font-size: 5rem;
-    font-weight: 400;
-    margin: 0%;
-    margin-bottom: 0%;
-    margin-top: 0%;
-    color: #2b59c3;
+.inter-bold {
+  font-weight: 700;
 }
 
-.subtitle {
-    font-family: "Tiro Devanagari Hindi", serif;
-    font-size: 1.75rem;
-    margin-top: 0%;
-    margin-bottom: 0%;
-    color: #b3c2f2;
-    text-align: right;
-
+.inter-black {
+  font-weight: 900;
 }
 
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #000;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+header.hidden {
+  transform: translateY(-100%);
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Intro Section */
+.intro-content {
+  display: flex;
+  align-items: center; /* Aligns content vertically */
+  justify-content: space-between; /* Spaces text and image */
+  padding: 100px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 12.5%;
+}
 .about {
+  text-align: left; 
+  margin-top: 40px;
+  margin-bottom: 20px; 
+  padding: 0 50px; 
+  font-size: 20px;
+}
+
+.text-content {
+  max-width: 60%; /* Ensures text stays left-aligned */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px; /* Adds spacing between lines */
+  overflow: visible; /* Prevents text from being clipped */
+}
+
+.intro-medium {
+  font-size: 50px;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+.intro-large {
+  font-size: 80px;
+  color: #304DAC;
+  margin: 0;
+}
+
+.intro-small {
+  font-size: 20px;
+  color: #B3C2F2;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.image-container {
+  flex-shrink: 0; /* Prevents image from shrinking */
+  margin-left: 20px; /* Adds space between text and image */
+  display: flex;
+  justify-content: flex-end; /* Aligns image to the right */
+}
+
+.image-container img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #4A90E2; /* Blue border for the image */
+}
+
+/* Projects Section */
+.projects, .skills, .contact {
+  text-align: left;
+  padding: 50px 20px;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 0px;
+}
+
+.folders {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.folders img {
+  width: 100px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.folders img:hover {
+  transform: scale(1.1);
+}
+
+/* Skills Section */
+.skills p {
+  margin-bottom: 0px;
+  color: #B3C2F2;
+  font-size: 18px;
+}
+
+/* Contact Section */
+.contact p {
+  margin-bottom: 0px;
+  color: #B3C2F2;
+  font-size: 18px;
+}
+
+.contact a {
+  color: #B3C2F2;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* General Paragraphs */
+p {
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .intro-content {
+    flex-direction: column; /* Stacks text and image */
+    align-items: left; /* Centers content */
+  }
+
+  .text-content {
+    align-items: left; /* Centers text for smaller screens */
+    text-align: left;
+  } 
+
+  .intro-description {
+    align-items: left; /* Centers text for smaller screens */
+    text-align: left;
+  }
+
+  .image-container {
     margin-top: 20px;
-}
+  }
 
-.about p {
-    font-size: 1rem;
-    margin-bottom: 10px;
-}
-
-.profile-pic {
+  .image-container img {
     width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-top: 10px;
-}
+    height: 150px; /* Reduces image size for smaller screens */
+  }
 
-.projects, .skills, footer {
-    margin-top: 30px;
-}
+  .intro-large {
+    font-size: 60px;
+    margin-bottom: 0px;
+    line-height: 0;
+  }
 
-.projects h2, .skills h2, footer h2 {
-    font-family: "Tiro Devanagari Hindi", serif;
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-}
+  .intro-medium {
+    font-size: 40px;
+    margin-bottom: 0px;
+    line-height: 0;
+  }
 
-.project-list {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
-}
-
-.project-card {
-    font-family: "Tiro Devanagari Hindi", serif;
-    font-weight: 400;
-    width: 100px;
-    height: 100px;
-    background-color: #89043d;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 0.8rem;
-    border-radius: 5px;
-}
-
-footer p {
-    font-family: "Tiro Devanagari Hindi", serif;
-    margin-top: 10px;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #b3c2f2;
+  .intro-small {
+    font-size: 18px;
+    line-height: 0.5;
+  }
 }

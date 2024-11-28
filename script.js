@@ -1,14 +1,11 @@
-// JavaScript to handle dynamic header visibility
+const header = document.querySelector('.header');
 let lastScrollY = window.scrollY;
-const scrollHeader = document.querySelector('.scroll-header');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > lastScrollY) {
-        // Scrolling down
-        scrollHeader.style.transform = 'translateY(0)';
-    } else {
-        // Scrolling up
-        scrollHeader.style.transform = 'translateY(-100%)';
-    }
-    lastScrollY = window.scrollY;
+  if (window.scrollY > lastScrollY) {
+    header.classList.add('hidden');
+  } else {
+    header.classList.remove('hidden');
+  }
+  lastScrollY = window.scrollY;
 });
