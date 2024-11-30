@@ -3,63 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mia Yan</title>
-  <!-- Load Inter Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&display=swap" rel="stylesheet">
+  <title>mia yan</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="header">
     <nav>
-      <a href="#home" class="nav-link" style="color: #89043D">MIA</a>
-      <a href="#projects" class="nav-link">PROJECTS</a>
-      <a href="#other" class="nav-link">OTHER</a>
-      <a href="#contact" class="nav-link">@</a>
+      <ul class="nav-links">
+        <li><a href="#home">MIA</a></li>
+        <li><a href="#about">PROJECTS</a></li>
+        <li><a href="#split">OTHER</a></li>
+        <li><a href="#services">CONTACT</a></li>
+      </ul>
     </nav>
   </header>
-
   <main>
-    <section id="home" class="intro">
-      <div class="intro-content">
-        <div class="text-content">
-          <p class="intro-medium inter-black">hi, i'm</p>
-          <h1 class="intro-large inter-black">mia yan</h1>
-          <p class="intro-small inter-bold">and welcome to my website :)</p>
+    <section id="split">
+      <div class="split-container">
+        <div class="split-text">
+          <h1>hi, i'm</h1>
+          <h2>mia yan</h2>
+          <h3>and welcome</h3>
+          <h3>to my website :)</h3>
         </div>
-        <div class="image-container">
-          <img src="image.jpg" alt="Mia Yan">
+        <div class="split-image">
+          <img src="image.jpg" alt="mia">
         </div>
-      </div>
-      <div class="intro-description">
-      <p class="about inter-bold">
-        Currently, I’m a junior at New York University, studying an interdisciplinary concentration of media studies, computer science, and business.
-      </p>
       </div>
     </section>
-
-    <section id="projects" class="projects">
-      <h2 class="inter-bold">projects</h2>
-      <div class="folders">
+    <section id="about">
+      <h4>Currently, I’m a junior at New York University, studying an interdisciplinary concentration of media studies, computer science, and business.</h4>
+    </section>
+    <section id="projects">
+      <h5>projects</h5>
+      <p>some things that i have done</p>
+         <div class="folders">
         <a href="#project1"><img src="folder-icon.png" alt="Project 1"></a>
         <a href="#project2"><img src="folder-icon.png" alt="Project 2"></a>
         <a href="#project3"><img src="folder-icon.png" alt="Project 3"></a>
       </div>
     </section>
 
-    <section id="skills" class="skills">
-      <h2 class="inter-bold">skills</h2>
-      <p class="inter-medium">Python, Java, Javascript, HTML, CSS</p>
-      <p class="inter-medium">Microsoft Office, Excel</p>
-      <p class="inter-medium">Adobe Creative Suite</p>
+    <section id="skills">
+      <h5>skills</h5>
+      <p>Python, Java, Javascript, HTML, CSS</p>
+      <p>Microsoft Office, Excel</p>
+      <p>Adobe Creative Suite</p>
     </section>
-
-    <section id="contact" class="contact">
-      <h2 class="inter-bold">find me</h2>
-      <p class="inter-medium">yanbmia@gmail.com</p>
-      <p><a href="https://linkedin.com/in/yanbmia" target="_blank" class="inter-medium">linkedin.com/in/yanbmia</a></p>
+    <section id="findme">
+      <h5>find me</h5>
+      <p>yanbmia@gmail.com</p>
+      <p>linkedin.com/in/yanbmia</p>
     </section>
   </main>
-
   <script src="script.js"></script>
 </body>
 </html>

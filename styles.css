@@ -1,134 +1,151 @@
 /* General Reset */
-body, h1, h2, p, a {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  background-color: #000;
-  color: #fff;
+  font-family: 'Inter', Arial, sans-serif;
   line-height: 1.6;
-}
-
-/* Inter Font Variations */
-.inter-thin {
-  font-weight: 100;
-}
-
-.inter-light {
-  font-weight: 300;
-}
-
-.inter-regular {
-  font-weight: 400;
-}
-
-.inter-bold {
-  font-weight: 700;
-}
-
-.inter-black {
-  font-weight: 900;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 /* Header */
-header {
+.header {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  background-color: #000;
+  background: #000000;
+  color: white;
+  padding: 10px 0;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hiding */
   z-index: 1000;
   display: flex;
   justify-content: center;
-  padding: 10px 0;
-  transform: translateY(0);
-  transition: transform 0.3s ease-in-out;
+  align-items: center;
 }
 
-header.hidden {
-  transform: translateY(-100%);
+.header.hidden {
+  transform: translateY(-100%); /* Hide the header by moving it upwards */
 }
 
-.nav-link {
-  color: #fff;
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* Space between navigation links */
+  flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.nav-links a {
+  color: white;
   text-decoration: none;
-  margin: 0 15px;
   font-size: 18px;
   font-weight: 700;
 }
 
-/* Intro Section */
-.intro-content {
-  display: flex;
-  align-items: center; /* Aligns content vertically */
-  justify-content: space-between; /* Spaces text and image */
+.nav-links a:hover {
+  color: #89043d;
+}
+
+/* Main Content */
+main {
+  padding-top: 80px; /* Space for fixed header */
+}
+
+section {
   padding: 100px 20px;
+  text-align: left;
+}
+h1 {
+    color: #FFFFFF;
+    font-size: 70px;
+    font-weight:900;
+    line-height: 70px;
+}
+h2 {
+    color: #304DAC;
+    font-size: 85px;
+    font-weight: 900;
+    line-height: 90px;
+}
+h3 {
+    color: #B3C2F2;
+    line-height: 20px;
+    font-weight: 500;
+    margin-left: 200px;
+}
+h4 {
+    color: #ffffff;
+    font-size: 25px;
+    margin-left: 7%;
+}
+h5 {
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 50px;
+}
+p {
+    color: #B3C2F2;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 35px;
+}
+
+#about {
+  background: #000000;
+}
+
+
+#split {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  background: #000000;
+}
+
+.split-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
-  margin-top: 12.5%;
-}
-.about {
-  text-align: left; 
-  margin-top: 40px;
-  margin-bottom: 20px; 
-  padding: 0 50px; 
-  font-size: 20px;
+  gap: 20px;
 }
 
-.text-content {
-  max-width: 60%; /* Ensures text stays left-aligned */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px; /* Adds spacing between lines */
-  overflow: visible; /* Prevents text from being clipped */
+.split-text {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
 }
 
-.intro-medium {
-  font-size: 50px;
-  color: #FFFFFF;
-  line-height: 1.2;
-}
-
-.intro-large {
-  font-size: 80px;
-  color: #304DAC;
-  margin: 0;
-}
-
-.intro-small {
-  font-size: 20px;
-  color: #B3C2F2;
-  line-height: 1.5;
-  margin: 0;
-}
-
-.image-container {
-  flex-shrink: 0; /* Prevents image from shrinking */
-  margin-left: 20px; /* Adds space between text and image */
-  display: flex;
-  justify-content: flex-end; /* Aligns image to the right */
-}
-
-.image-container img {
-  width: 200px;
-  height: 200px;
+/*.split-image img {
+  max-width: 300px;
+  height: auto;
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid #4A90E2; /* Blue border for the image */
+  width: 300px;
+  height: 300px;
+  border: 5px solid;
+}*/
+
+.split-image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #B3C2F2; /* Blue border for the image */
 }
 
-/* Projects Section */
-.projects, .skills, .contact {
-  text-align: left;
-  padding: 50px 20px;
-}
-
-h2 {
-  font-size: 30px;
-  margin-bottom: 0px;
+.split-image {
+  flex-shrink: 0; /* Prevents image from shrinking */
+  display: flex;
+  justify-content: flex-end; /* Aligns image to the right */
 }
 
 .folders {
@@ -147,76 +164,24 @@ h2 {
   transform: scale(1.1);
 }
 
-/* Skills Section */
-.skills p {
-  margin-bottom: 0px;
-  color: #B3C2F2;
-  font-size: 18px;
-}
-
-/* Contact Section */
-.contact p {
-  margin-bottom: 0px;
-  color: #B3C2F2;
-  font-size: 18px;
-}
-
-.contact a {
-  color: #B3C2F2;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.contact a:hover {
-  text-decoration: underline;
-}
-
-/* General Paragraphs */
-p {
-  font-size: 17px;
-  line-height: 1.8;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 600px) {
-  .intro-content {
-    flex-direction: column; /* Stacks text and image */
-    align-items: left; /* Centers content */
+/* Responsive Design */
+@media (max-width: 725px) {
+  .nav-links {
+    justify-content: space-evenly; /* Ensure links are spaced evenly */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    gap: 20px; /* Adjust gap for smaller screens */
   }
 
-  .text-content {
-    align-items: left; /* Centers text for smaller screens */
-    text-align: left;
-  } 
-
-  .intro-description {
-    align-items: left; /* Centers text for smaller screens */
-    text-align: left;
+  .nav-links a {
+    font-size: 16px; /* Smaller font for smaller screens */
   }
 
-  .image-container {
-    margin-top: 20px;
+  .split-container {
+    flex-direction: column;
   }
 
-  .image-container img {
-    width: 150px;
-    height: 150px; /* Reduces image size for smaller screens */
+  .split-text {
+    text-align: center;
   }
 
-  .intro-large {
-    font-size: 60px;
-    margin-bottom: 0px;
-    line-height: 0;
-  }
-
-  .intro-medium {
-    font-size: 40px;
-    margin-bottom: 0px;
-    line-height: 0;
-  }
-
-  .intro-small {
-    font-size: 18px;
-    line-height: 0.5;
-  }
 }
