@@ -80,7 +80,6 @@ h3 {
 h4 {
     color: #ffffff;
     font-size: 25px;
-    margin-left: 7%;
 }
 h5 {
     color: #ffffff;
@@ -97,6 +96,16 @@ p {
 
 #about {
   background: #000000;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#projects, #skills, #findme {
+    margin-left: 20px; 
+}
+
+.folders {
+    padding-top: 100px;
 }
 
 
@@ -105,7 +114,7 @@ p {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 50px 20px;
+  padding: 0px 50px;
   background: #000000;
 }
 
@@ -124,15 +133,6 @@ p {
   text-align: left;
 }
 
-/*.split-image img {
-  max-width: 300px;
-  height: auto;
-  border-radius: 50%;
-  object-fit: cover;
-  width: 300px;
-  height: 300px;
-  border: 5px solid;
-}*/
 
 .split-image img {
   width: 300px;
@@ -146,6 +146,7 @@ p {
   flex-shrink: 0; /* Prevents image from shrinking */
   display: flex;
   justify-content: flex-end; /* Aligns image to the right */
+  padding-right: 3.5%; 
 }
 
 .folders {
