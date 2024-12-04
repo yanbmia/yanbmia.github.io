@@ -95,6 +95,7 @@ h1 {
 }
 h2 {
   margin: 0;
+  color: #c0c7ff;
 }
 h3 {
   margin: 0;
@@ -112,17 +113,25 @@ a {
   transition: color 0.3s ease;
 }
 .hover-ombre {
+  background: linear-gradient(60deg,  #c0c7ff, #6173ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+/* 
+.hover-ombre {
   color: #ffffff;
   transition: background 0.3s ease, color 0.3s ease;
   position: relative;
-}
+  }
 .hover-ombre:hover {
   background: linear-gradient(60deg,  #c0c7ff, #6173ff);
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent; /* Makes the gradient visible */
+  color: transparent;
   transition: background 0.5s ease, color 0.5s ease;
-}
+} */
 .hover-violet:hover {
   color: #9a00d6;
 }
@@ -162,13 +171,13 @@ a {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border: 3px solid #ffffff;
+  border: 3px solid #6173ff;
   object-fit: cover;
   flex-shrink: 0;
 }
-.profile-image:hover {
+/*.profile-image:hover {
   border: 3px solid #6173ff;
-}
+} */
 
 .horizontal-sections {
   display: flex;
