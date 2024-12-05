@@ -199,7 +199,7 @@ a {
 .text-section:hover {
   border: 1px solid #6173ff;
 }
-.responsive-image {
+/*.responsive-image {
     width: auto;
     height: auto;
     max-width: 100%;
@@ -219,7 +219,8 @@ a {
 }
 .img-section:hover {
   transform: scale(1.1);
-}
+}*/
+
 /* Adjust for smaller screens */
 @media (max-width: 600px) {
   main {
@@ -267,10 +268,10 @@ a {
   h2 {
     color: #c0c7ff;
   }
-  .responsive-image, .img-section {
+  /*.responsive-image, .img-section {
         max-height: 150px;
         max-width: 90%;
-    }
+    } */
 }
 
 /* Footer */
