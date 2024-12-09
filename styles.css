@@ -231,7 +231,11 @@ a {
       line-height: 3.5rem;
   }
   .hover-ombre {
-      color: #c0c7ff;
+    background: linear-gradient(60deg,  #c0c7ff, #6173ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: background 0.5s ease, color 0.5s ease;
   }
   .hover-violet {
       color: #fff;
