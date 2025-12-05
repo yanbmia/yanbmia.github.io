@@ -3,7 +3,10 @@ let lastScrollY = window.scrollY;
 
 // Header hide/show logic
 window.addEventListener('scroll', () => {
-  if (window.scrollY > lastScrollY) {
+  if (window.scrollY === 0) {
+    // Always show header at the top
+    header.classList.remove('hidden');
+  } else if (window.scrollY > lastScrollY) {
     header.classList.add('hidden');
   } else {
     header.classList.remove('hidden');
@@ -15,7 +18,7 @@ window.addEventListener('scroll', () => {
 const observerOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.1 // trigger when 10% of the element is visible
+    threshold: 0.1
 };
 
 const observer = new IntersectionObserver((entries, observer) => {
