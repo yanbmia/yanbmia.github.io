@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mia</title>
+    <title>mia | portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="icon" href="web-logo.png" type="image/png" style="width: 10px;height:auto;">
+    <link rel="icon" href="web-logo.png" type="image/png">
 </head>
 <body>
     <header class="header">
         <nav>
             <a href="https://yanbmia.github.io/">
-                <img src="logo.png" alt="MIA" style="height: 35px; width: auto;">
+                <img src="logo.png" alt="MIA" class="nav-logo">
             </a>
             <ul>
                 <li><a href="https://yanbmia.github.io/#projects">PROJECTS</a></li>
@@ -22,128 +22,118 @@
             </ul>
         </nav>
     </header>
+
     <main>
-        <section id="about">
+        <section id="about" class="hidden-fade">
             <h1><span class="hover-ombre">mia yan</span></h1>
 
             <div class="about-container">
-                <!-- <h1><span class="hover-ombre">mia yan</span></h1> -->
                 <div>
                     <i><p>senior at <span class="hover-violet">New York University</span></p></i>
                     <p>
                         concentration in <span class="hover-red">computer science</span>,
                         <span class="hover-orange">business</span>, and
                         <span class="hover-yellow">new media</span>
-                        </p>
+                    </p>
                 </div>
                 <img src="image.jpg" alt="Profile Picture" class="profile-image">
             </div>
         </section>
-<hr class="custom-line">
-    <section id="findme">
-        <h2>find me</h2>
+
+        <hr class="custom-line">
+
+        <section id="findme" class="hidden-fade">
+            <h2>find me</h2>
             <p>yanbmia@gmail.com</p>
-            <span class="link-blue"><a href="https://linkedin.com/in/yanbmia">linkedin</a></span>
-            <br>
-            <span class="link-green"><a href="https://github.com/yanbmia">github</a></span>
-    </section>
-<hr class="custom-line">
-    <section id="skills">
-        <h2>skills</h2>
-            <section class="horizontal-sections">
+            <div class="social-links">
+                <span class="link-blue"><a href="https://linkedin.com/in/yanbmia" target="_blank">linkedin</a></span>
+                <span class="link-green"><a href="https://github.com/yanbmia" target="_blank">github</a></span>
+            </div>
+        </section>
+
+        <hr class="custom-line">
+
+        <section id="skills" class="hidden-fade">
+            <h2>skills</h2>
+            <div class="horizontal-sections">
                 <div class="text-section">
-                    <p>Python</p>
-                    <p>Java</p>
-                    <p>SQL</p>
+                    <p>Python</p><p>Java</p><p>SQL</p>
                 </div>
                 <div class="text-section">
-                    <p>C</p>
-                    <p>Javascript</p>
-                    <p>HTML/CSS</p>
+                    <p>C</p><p>Javascript</p><p>HTML/CSS</p>
                 </div>
                 <div class="text-section">
-                    <p>Figma</p>
-                    <p>Adobe Illustrator</p>
-                    <p>Adobe Photoshop</p>
+                    <p>Figma</p><p>Illustrator</p><p>Photoshop</p>
                 </div>
                 <div class="text-section">
-                    <p>Excel</p>
-                    <p>MS Office</p>
+                    <p>Excel</p><p>MS Office</p>
                 </div>
-            </section>
-    </section>
-    <section id="experience">
-        <h2>experience with</h2>
-            <section class="horizontal-sections">
+            </div>
+        </section>
+
+        <section id="experience" class="hidden-fade">
+            <h2>experience with</h2>
+            <div class="horizontal-sections">
                 <div class="text-section">
-                    <p>C++</p>
-                    <p>C#</p>
-                    <p>Swift</p>
-                    <p>Spyder</p>
+                    <p>C++</p><p>C#</p><p>Swift</p><p>Spyder</p>
                 </div>
                 <div class="text-section">
-                    <p>MySQL</p>
-                    <p>Flask</p>
-                    <p>Jinja</p>
+                    <p>MySQL</p><p>Flask</p><p>Jinja</p>
                 </div>
                 <div class="text-section">
-                    <p>Linux</p>
-                    <p>Ubuntu</p>
-                    <p>Docker</p>
+                    <p>Linux</p><p>Ubuntu</p><p>Docker</p>
                 </div>
-            </section>
-    </section>
-<hr class="custom-line">
-    <div id="#projects"></div>
+            </div>
+        </section>
+
+        <hr class="custom-line">
+
+        <div id="projects-marker"></div>
         <h2>projects</h2>
-        <section id="projects">
-            <a href="https://github.com/yanbmia/cooking-p5">
-                <button class="glow-on-hover" type="button">
-                    <h3>cooking-p5</h3>
-                    <p>interactive cooking app using p5.js</p>
-                </button>
-                </a>
-            <a href="https://github.com/yanbmia/Modified-Tiktok-Link">
-                <button class="glow-on-hover" type="button">
+        <section id="projects" class="projects-grid hidden-fade">
+            
+            <a href="https://github.com/yanbmia/cooking-p5" class="glow-on-hover" target="_blank">
+                <h3>cooking-p5</h3>
+                <p>interactive cooking app using p5.js</p>
+            </a>
+
+            <a href="https://github.com/yanbmia/Modified-Tiktok-Link" class="glow-on-hover" target="_blank">
                 <h3>modified-tiktok-link</h3>
                 <p>allows users to view tiktok links without the app</p>
-            </button>
             </a>
-            <a href="https://github.com/yanbmia/spotify-automation-bot">
-                <button class="glow-on-hover" type="button">
-                    <h3>spotify-automation-bot</h3>
-                    <p>automate artist following on Spotify</p>
-                </button>
-                </a>
-            <a href="https://github.com/yanbmia/headline-crawler">
-            <button class="glow-on-hover" type="button">
+
+            <a href="https://github.com/yanbmia/spotify-automation-bot" class="glow-on-hover" target="_blank">
+                <h3>spotify-automation-bot</h3>
+                <p>automate artist following on Spotify</p>
+            </a>
+
+            <a href="https://github.com/yanbmia/headline-crawler" class="glow-on-hover" target="_blank">
                 <h3>headline-crawler</h3>
                 <p>web crawler that navigates and tracks NYT headlines</p>
-            </button>
             </a>
-            <a href="https://github.com/yanbmia/weather-packed">
-            <button class="glow-on-hover" type="button">
+
+            <a href="https://github.com/yanbmia/weather-packed" class="glow-on-hover" target="_blank">
                 <h3>weather-packed</h3>
-                <p>utitlizing web api data to help users pack for a trip based on the weather</p>
-            </button>
+                <p>utilizing web api data to help users pack based on weather</p>
             </a>
-            <a href="https://github.com/yanbmia/snakes-and-ladders">
-                <button class="glow-on-hover" type="button">
-                    <h3>snakes-and-ladders</h3>
-                    <p>Python version of the board game Snakes and Ladders</p>
-                </button>
-                </a>
-            <a href="https://github.com/yanbmia/project-dancing-ducks">
-            <button class="glow-on-hover" type="button">
+
+            <a href="https://github.com/yanbmia/snakes-and-ladders" class="glow-on-hover" target="_blank">
+                <h3>snakes-and-ladders</h3>
+                <p>Python version of the board game Snakes and Ladders</p>
+            </a>
+
+            <a href="https://github.com/yanbmia/project-dancing-ducks" class="glow-on-hover" target="_blank">
                 <h3>project-dancing-ducks</h3>
                 <p>portfolio site made using a virtual environment, DigitalOcean</p>
-            </button>
             </a>
-            <button class="glow-on-hover" type="button">
+
+            <div class="glow-on-hover disabled">
                 <h3>ecofriend</h3>
-                <p>iOS app made to help users track their carbon emmisons (Kode with Klossy)</p>
-            </button>
+                <p>iOS app to help users track carbon emissions (Kode with Klossy)</p>
+            </div>
+        </section>
     </main>
+
     <footer>
         <p>thanks for visiting :)</p>
     </footer>
