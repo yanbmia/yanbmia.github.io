@@ -337,6 +337,28 @@ a {
     transform: translateY(0);
 }
 
+.submit-btn {
+    background: #c0c7ff;
+    color: #000000;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-family: 'Chivo Mono', monospace;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.submit-btn:hover {
+    background: #9da9ff;
+    transform: translateY(-2px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
 .contact-info {
     margin-top: 3rem;
     padding-top: 2rem;
