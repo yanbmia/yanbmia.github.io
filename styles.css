@@ -208,22 +208,25 @@ a {
 
 /* Skills Grid */
 .horizontal-sections {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
+    margin-bottom: 75px;
 }
 
 .text-section {
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid rgba(192, 199, 255, 0.3);
+    border-radius: 8px;
     text-align: center;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .text-section:hover {
-    border: 1px solid #6173ff;
-    transform: translateY(-5px);
+    border-color: #c0c7ff;
+    background: rgba(192, 199, 255, 0.1);
+    transform: translateY(-3px);
 }
 
 /* PROJECTS GRID*/
