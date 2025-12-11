@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    font-size: 115%;
 }
 
 body {
@@ -20,7 +21,7 @@ body {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     transition: transform 0.3s ease-in-out;
-    padding: 0.5rem 2rem;
+    padding: 1rem 2rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -37,7 +38,7 @@ nav {
 }
 
 .nav-logo {
-    height: 35px;
+    height: 50px;
     width: auto;
     transition: transform 0.8s ease-in-out; 
 }
@@ -57,7 +58,7 @@ nav ul {
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.15rem;
 }
 
 main {
@@ -79,6 +80,17 @@ h2 {
     font-size: 2rem;
 }
 h3 { margin: 0; }
+h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+.relevant-courses h4 {
+    color: #c0c7ff;
+}
+
 p { margin: 0; }
 
 a {
@@ -153,11 +165,13 @@ a {
 
 /* Social Links */
 .social-links {
-    margin-top: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.5 rem;
     align-items: flex-start;
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #ffffff;
 }
 .link-red a:hover {
     color: white;
