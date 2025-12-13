@@ -105,46 +105,57 @@
         <h2>projects</h2>
         <section id="projects" class="projects-grid hidden-fade">
             
-            <a href="https://github.com/yanbmia/cooking-p5" class="glow-on-hover" target="_blank">
+            <div class="glow-on-hover project-card" data-project="cooking-p5">
                 <h3>cooking-p5</h3>
                 <p>interactive cooking app using p5.js</p>
-            </a>
+            </div>
 
-            <a href="https://github.com/yanbmia/Modified-Tiktok-Link" class="glow-on-hover" target="_blank">
+            <div class="glow-on-hover project-card" data-project="modified-tiktok">
                 <h3>modified-tiktok-link</h3>
-                <p>allows users to view tiktok links without the app</p>
-            </a>
+                <p>view tiktok links without the app</p>
+            </div>
 
-            <a href="https://github.com/yanbmia/spotify-automation-bot" class="glow-on-hover" target="_blank">
+            <div class="glow-on-hover project-card" data-project="spotify-bot">
                 <h3>spotify-automation-bot</h3>
                 <p>automate artist following on Spotify</p>
-            </a>
+            </div>
 
-            <a href="https://github.com/yanbmia/headline-crawler" class="glow-on-hover" target="_blank">
+            <div class="glow-on-hover project-card" data-project="headline-crawler">
                 <h3>headline-crawler</h3>
-                <p>web crawler that navigates and tracks NYT headlines</p>
-            </a>
+                <p>web crawler that navigates and tracks news headlines</p>
+            </div>
 
-            <a href="https://github.com/yanbmia/weather-packed" class="glow-on-hover" target="_blank">
+            <div class="glow-on-hover project-card" data-project="weather-packed">
                 <h3>weather-packed</h3>
-                <p>utilizing web api data to help users pack based on weather</p>
-            </a>
+                <p>utilizing web api data</p>
+            </div>
 
-            <a href="https://github.com/yanbmia/snakes-and-ladders" class="glow-on-hover" target="_blank">
+            <div class="glow-on-hover project-card" data-project="snakes-ladders">
                 <h3>snakes-and-ladders</h3>
-                <p>Python version of the board game Snakes and Ladders</p>
-            </a>
+                <p>version of the board game Snakes & Ladders</p>
+            </div>
 
-            <a href="https://github.com/yanbmia/project-dancing-ducks" class="glow-on-hover" target="_blank">
+            <div class="glow-on-hover project-card" data-project="dancing-ducks">
                 <h3>project-dancing-ducks</h3>
-                <p>portfolio site made using a virtual environment, DigitalOcean</p>
-            </a>
+                <p>portfolio site made using DigitalOcean</p>
+            </div>
 
             <div class="glow-on-hover disabled">
                 <h3>ecofriend</h3>
-                <p>iOS app to help users track carbon emissions (Kode with Klossy)</p>
+                <p>iOS prototype app to track personal carbon emissions</p>
             </div>
         </section>
+
+        <!-- Project Modal -->
+        <div id="projectModal" class="modal">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+                <p id="modalReflection" class="modal-reflection"></p>
+                <a id="modalLink" href="#" target="_blank" class="modal-button">GitHub</a>
+            </div>
+        </div>
     </main>
 
     <footer>
