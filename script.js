@@ -77,6 +77,12 @@ const projectData = {
         description: 'A portfolio website built using a virtual environment and deployed on DigitalOcean. Utilizes server configuration, deployment practices, and cloud hosting.',
         reflection: 'Not currently live. This was build with Major League Hacking x Meta for their production engineering program. Most of the stuff I worked on can not be shared unfortunately.',
         link: 'https://github.com/yanbmia/project-dancing-ducks'
+    },
+    'sunlit-farms': {
+        title: 'sunlit-farms',
+        description: 'A farming simulation game inspired by Stardew Valley, built using p5.js. Features crop management, seasonal cycles, and interactive gameplay mechanics.',
+        reflection: '',
+        link: 'https://github.com/yanbmia/sunlit-farms'
     }
 };
 
