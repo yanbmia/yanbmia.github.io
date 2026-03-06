@@ -78,11 +78,11 @@ const projectData = {
         reflection: 'Not currently live. This was build with Major League Hacking x Meta for their production engineering program. Most of the stuff I worked on can not be shared unfortunately.',
         link: 'https://github.com/yanbmia/project-dancing-ducks'
     },
-    'sunlit-farms': {
-        title: 'sunlit-farms',
+    'farming-p5': {
+        title: 'farming-p5',
         description: 'A farming simulation game inspired by Stardew Valley, built using p5.js. Features crop management, seasonal cycles, and interactive gameplay mechanics.',
-        reflection: '',
-        link: 'https://github.com/yanbmia/sunlit-farms'
+        reflection: 'Cute game to pass the time :D Further developments will come in the future.',
+        link: 'https://github.com/yanbmia/farming-p5'
     }
 };
 
