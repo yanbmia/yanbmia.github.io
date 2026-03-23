@@ -39,13 +39,13 @@ const projectData = {
     'cooking-p5': {
         title: 'cooking-p5',
         description: 'An interactive cooking game built using p5.js. Features interactive animations and a modern interface design.',
-        reflection: 'This project was built as a group assignment over 3 weeks. All of the art was hand drawn with Procreate. I drew the object elements (not an artist but I tried)! It was interesting managing this assignment as a group, as we had to coordinate our coding styles and ensure integration of different components. I learned a lot about teamwork and version control through this project. ',
+        reflection: 'This project was built as a group assignment over 3 weeks. All of the art was hand drawn with Procreate. I drew the object elements (not an artist but I tried)! It was interesting managing this assignment as a group, since we had to coordinate our coding styles and ensure integration of different components. I learned a lot about teamwork and version control through this project. ',
         link: 'https://github.com/yanbmia/cooking-p5'
     },
     'modified-tiktok': {
         title: 'modified-tiktok-link',
         description: 'A tool that allows users to view TikTok content without requiring the TikTok app.',
-        reflection: 'I use this tool just about every day to view Tiktok links that my friends send me. This was one of those moments where I thought, "there has to be a better way to do this," so I built it myself.',
+        reflection: 'I use this tool just about every day to view Tiktok links that my friends send me. This is for everyone who deleted Tiktok off their phone!',
         link: 'https://github.com/yanbmia/Modified-Tiktok-Link'
     },
     'spotify-bot': {
