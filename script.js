@@ -1,10 +1,10 @@
 const header = document.querySelector('.header');
 let lastScrollY = window.scrollY;
 
-// Header hide/show logic
+// header hide/show logic
 window.addEventListener('scroll', () => {
   if (window.scrollY === 0) {
-    // Always show header at the top
+    // show header at the top
     header.classList.remove('hidden');
   } else if (window.scrollY > lastScrollY) {
     header.classList.add('hidden');
@@ -14,7 +14,7 @@ window.addEventListener('scroll', () => {
   lastScrollY = window.scrollY;
 });
 
-// Scroll Fade-in Animation
+// scroll Fade-in Animation
 const observerOptions = {
     root: null,
     rootMargin: '0px',
@@ -30,7 +30,7 @@ const observer = new IntersectionObserver((entries, observer) => {
     });
 }, observerOptions);
 
-// Watch all elements with the 'hidden-fade' class
+// all elements with the 'hidden-fade' class
 const fadeElements = document.querySelectorAll('.hidden-fade');
 fadeElements.forEach(el => observer.observe(el));
 
@@ -78,8 +78,13 @@ const projectData = {
         reflection: 'Not currently live. This was build with Major League Hacking x Meta for their production engineering program. Most of the stuff I worked on can not be shared unfortunately.',
         link: 'https://github.com/yanbmia/project-dancing-ducks'
     },
+    'experimenting-microgpt': {
+        title: 'experimenting-microgpt',
+        description: 'Exploring lightweight transformer-based LLM architecture and inference optimization with MicroGPT.',
+        reflection: 'Captured learnings around model quantization, deployment latency profiles, and curriculum-designed tuning for small-scale language models.',
+        link: 'https://github.com/yanbmia/experimenting-microgpt'
+    },
     'farming-p5': {
-        title: 'farming-p5',
         description: 'A farming simulation game inspired by Stardew Valley, built using p5.js. Features crop management, seasonal cycles, and interactive gameplay mechanics.',
         reflection: 'Cute game to pass the time :D Further developments will come in the future.',
         link: 'https://github.com/yanbmia/farming-p5'
@@ -93,7 +98,7 @@ const modalReflection = document.getElementById('modalReflection');
 const modalLink = document.getElementById('modalLink');
 const modalClose = document.querySelector('.modal-close');
 
-// Open modal when clicking project cards
+// open modal when clicking project cards
 document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('click', () => {
         const projectId = card.getAttribute('data-project');
@@ -111,13 +116,13 @@ document.querySelectorAll('.project-card').forEach(card => {
     });
 });
 
-// Close modal
+// close modal
 modalClose.addEventListener('click', () => {
     modal.classList.remove('active');
     document.body.style.overflow = 'auto';
 });
 
-// Close modal when clicking outside
+// close modal when clicking outside
 modal.addEventListener('click', (e) => {
     if (e.target === modal) {
         modal.classList.remove('active');
@@ -125,7 +130,7 @@ modal.addEventListener('click', (e) => {
     }
 });
 
-// Close modal with Escape key
+// close modal with Escape key
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('active')) {
         modal.classList.remove('active');
