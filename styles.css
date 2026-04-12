@@ -415,6 +415,15 @@ a {
     opacity: 0.9;
 }
 
+#modalPlayLink {
+    background: linear-gradient(135deg, #2d0052, #53269a, #3d0066);
+    color: #ffffff;
+}
+
+#modalPlayLink:hover {
+    background: linear-gradient(135deg, #3d0066, #53269a, #4d007a);
+}
+
 /* Scroll Animation Classes */
 .hidden-fade {
     opacity: 0;

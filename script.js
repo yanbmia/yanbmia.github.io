@@ -40,7 +40,8 @@ const projectData = {
         title: 'cooking-p5',
         description: 'An interactive cooking game built using p5.js. Features interactive animations and a modern interface design.',
         reflection: 'This project was built as a group assignment over 3 weeks. All of the art was hand drawn with Procreate. I drew the object elements (not an artist but I tried)! It was interesting managing this assignment as a group, since we had to coordinate our coding styles and ensure integration of different components. I learned a lot about teamwork and version control through this project. ',
-        link: 'https://github.com/yanbmia/cooking-p5'
+        link: 'https://github.com/yanbmia/cooking-p5',
+        playLink: 'https://yanbmia.github.io/cooking-p5/'
     },
     'modified-tiktok': {
         title: 'modified-tiktok-link',
@@ -87,7 +88,8 @@ const projectData = {
     'farming-p5': {
         description: 'A farming simulation game inspired by Stardew Valley, built using p5.js. Features crop management, seasonal cycles, and interactive gameplay mechanics.',
         reflection: 'Cute game to pass the time :D Further developments will come in the future.',
-        link: 'https://github.com/yanbmia/farming-p5'
+        link: 'https://github.com/yanbmia/farming-p5',
+        playLink: 'https://yanbmia.github.io/farming-p5/'
     }
 };
 
@@ -96,6 +98,7 @@ const modalTitle = document.getElementById('modalTitle');
 const modalDescription = document.getElementById('modalDescription');
 const modalReflection = document.getElementById('modalReflection');
 const modalLink = document.getElementById('modalLink');
+const modalPlayLink = document.getElementById('modalPlayLink');
 const modalClose = document.querySelector('.modal-close');
 
 // open modal when clicking project cards
@@ -110,6 +113,12 @@ document.querySelectorAll('.project-card').forEach(card => {
             modalReflection.textContent = project.reflection;
             modalReflection.style.display = project.reflection ? 'block' : 'none';
             modalLink.href = project.link;
+            if (project.playLink) {
+                modalPlayLink.href = project.playLink;
+                modalPlayLink.style.display = 'inline-block';
+            } else {
+                modalPlayLink.style.display = 'none';
+            }
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
