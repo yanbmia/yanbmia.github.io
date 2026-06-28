@@ -36,6 +36,19 @@ fadeElements.forEach(el => observer.observe(el));
 
 // Project Modal Functionality
 const projectData = {
+    'airbnb-albany-pricing': {
+        title: 'airbnb-albany-pricing',
+        description: 'A model that predicts whether an Airbnb listing in Albany, NY will be booked on a given day and recommends a competitive nightly price, built on 11 months of real Inside Airbnb data (1.66M calendar-day records, 478 listings).',
+        reflection: 'The thing I\'m most proud of here is the leakage auditing. Since this is time-series data, I used chronological train/test splits and checked every feature against the rule that a prediction for day t can only use information available before t. Caught a leaky neighborhood-occupancy feature by fixing it with K-fold target encoding :D',
+        link: 'https://github.com/yanbmia/airbnb-albany-pricing'
+    },
+    'proximity': {
+        title: 'proximity',
+        description: 'An interactive map that shades NYC neighborhoods based on how well they match your preferences — proximity to NYU/Columbia, safety, parks, grocery chains, subway access, rent, and bikeshare coverage.',
+        reflection: 'Built this after one too many group chats trying to figure out where to live near campus. All the scoring (distance, quartile binning, walk-time estimates) is pure Python with no GIS libraries, so runs without network or package access.',
+        link: 'https://github.com/yanbmia/proximity',
+        playLink: 'https://yanbmia.github.io/proximity/'
+    },
     'cooking-p5': {
         title: 'cooking-p5',
         description: 'An interactive cooking game built using p5.js. Features interactive animations and a modern interface design.',
@@ -82,7 +95,6 @@ const projectData = {
     'experimenting-microgpt': {
         title: 'experimenting-microgpt',
         description: 'Exploring lightweight transformer-based LLM architecture and inference optimization with MicroGPT.',
-        reflection: 'Captured learnings around model quantization, deployment latency profiles, and curriculum-designed tuning for small-scale language models.',
         link: 'https://github.com/yanbmia/experimenting-microgpt'
     },
     'farming-p5': {
