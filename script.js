@@ -39,27 +39,27 @@ const projectData = {
     'airbnb-albany-pricing': {
         title: 'airbnb-albany-pricing',
         description: 'A model that predicts whether an Airbnb listing in Albany, NY will be booked on a given day and recommends a competitive nightly price, built on 11 months of real Inside Airbnb data (1.66M calendar-day records, 478 listings).',
-        reflection: 'The thing I\'m most proud of here is the leakage auditing. Since this is time-series data, I used chronological train/test splits and checked every feature against the rule that a prediction for day t can only use information available before t. Caught a leaky neighborhood-occupancy feature by fixing it with K-fold target encoding :D',
+        reflection: 'Pricing variation across 478 listings and messy time-series data! Which meant chronological train/test splits and auditing every feature for leakage. But at least I got to catch a leaky neighborhood-occupancy feature that I fixed with K-fold target encoding. :D',
         link: 'https://github.com/yanbmia/airbnb-albany-pricing'
     },
     'proximity': {
         title: 'proximity',
         description: 'An interactive map that shades NYC neighborhoods based on how well they match your preferences — proximity to NYU/Columbia, safety, parks, grocery chains, subway access, rent, and bikeshare coverage.',
-        reflection: 'Built this after one too many group chats trying to figure out where to live near campus. All the scoring (distance, quartile binning, walk-time estimates) is pure Python with no GIS libraries, so runs without network or package access.',
+        reflection: 'I built this after one too many group chats where everyone weighed the same tradeoffs (safety, rent, commute) with no consistent way to compare neighborhoods. Pure Python with no GIS libraries!',
         link: 'https://github.com/yanbmia/proximity',
         playLink: 'https://yanbmia.github.io/proximity/'
     },
     'cooking-p5': {
         title: 'cooking-p5',
         description: 'An interactive cooking game built using p5.js. Features interactive animations and a modern interface design.',
-        reflection: 'This project was built as a group assignment over 3 weeks. All of the art was hand drawn with Procreate. I drew the object elements (not an artist but I tried)! It was interesting managing this assignment as a group, since we had to coordinate our coding styles and ensure integration of different components. I learned a lot about teamwork and version control through this project. ',
+        reflection: 'This was a 3-week group assignment. I pushed for hand-drawn art (Procreate, not an artist but I tried)!. The harder problem was coordination, not code, so we agreed on shared conventions and a branching workflow up front, which made integration less painful.',
         link: 'https://github.com/yanbmia/cooking-p5',
         playLink: 'https://yanbmia.github.io/cooking-p5/'
     },
     'modified-tiktok': {
         title: 'modified-tiktok-link',
         description: 'A tool that allows users to view TikTok content without requiring the TikTok app.',
-        reflection: 'I use this tool just about every day to view Tiktok links that my friends send me. This is for everyone who deleted Tiktok off their phone!',
+        reflection: 'I built this because I deleted TikTok off my phone but kept getting links from friends with no way to watch them :( I still use it almost every day, which is the best validation for building something yourself.',
         link: 'https://github.com/yanbmia/Modified-Tiktok-Link'
     },
     'spotify-bot': {
@@ -71,7 +71,7 @@ const projectData = {
     'headline-crawler': {
         title: 'headline-crawler',
         description: 'A web crawler that navigates and tracks news headlines. Uses web scraping techniques and data collection methods.',
-        reflection: 'This is still in development! The web scraping functionality works. But the larger goal of this project is take all the scraped data and compile them into a single database for analysis.',
+        reflection: 'I started this project a while ago, but been going back and forth on what to do with it...',
         link: 'https://github.com/yanbmia/headline-crawler'
     },
     'weather-packed': {
@@ -83,13 +83,13 @@ const projectData = {
     'snakes-ladders': {
         title: 'snakes-and-ladders',
         description: 'A Python implementation of the classic board game Snakes and Ladders. This project recreates the traditional game experience with digital gameplay mechanics and player interaction.',
-        reflection: 'I think this was one of my first Python projects (a long long time ago)! It was a fun way to learn about classes and object-oriented programming.',
+        reflection: 'One of my first Python projects. I picked a board game because the rules map cleanly onto objects (players, board, dice, snakes, ladders), which made it a low-stakes way to actually learn object-oriented programming instead of just reading about it.',
         link: 'https://github.com/yanbmia/snakes-and-ladders'
     },
     'dancing-ducks': {
         title: 'project-dancing-ducks',
         description: 'A portfolio website built using a virtual environment and deployed on DigitalOcean. Utilizes server configuration, deployment practices, and cloud hosting.',
-        reflection: 'Not currently live. This was build with Major League Hacking x Meta for their production engineering program. Most of the stuff I worked on can not be shared unfortunately.',
+        reflection: 'Built through Major League Hacking x Meta\'s production engineering program. I joined to get exposure to server configuration and deployment, since coursework never covered that. Not currently live, and most of what I worked on isn\'t shareable, but it\'s where I learned what actually goes into shipping something beyond writing the code.',
         link: 'https://github.com/yanbmia/project-dancing-ducks'
     },
     'experimenting-microgpt': {
@@ -99,7 +99,7 @@ const projectData = {
     },
     'farming-p5': {
         description: 'A farming simulation game inspired by Stardew Valley, built using p5.js. Features crop management, seasonal cycles, and interactive gameplay mechanics.',
-        reflection: 'Cute game to pass the time :D Further developments will come in the future.',
+        reflection: 'I built this to get more comfortable with p5.js\'s animation and game-loop model after using it once before. Inspired by Stardew Valley! Further developments to come.',
         link: 'https://github.com/yanbmia/farming-p5',
         playLink: 'https://yanbmia.github.io/farming-p5/'
     }
