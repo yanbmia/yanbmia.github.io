@@ -43,19 +43,19 @@ window.chatbotQA = [
     },
     {
         question: "What's the airbnb project? Tell me about airbnb-albany-pricing.",
-        answer: "ML model predicting Airbnb occupancy and price in Albany, NY using real listing-day records. I used chronological train/test splits to avoid leakage, and caught then fixed a leaky neighborhood-occupancy feature with K-fold target encoding."
+        answer: "It's an ML pipeline to predict Airbnb booking probability and recommend a competitive nightly price for listings in Albany, NY. The data was trained on 1.66M real calendar-day records from Inside Airbnb. The interesting part was the data integrity work: because it's time-series, I used chronological train/test splits instead of random splits, and caught a leaky neighborhood-occupancy feature mid-build that would've inflated accuracy. Fixed it with K-fold target encoding."
     },
     {
         question: "What's the proximity project? Tell me about the NYC neighborhood map.",
-        answer: "Interactive map that scores NYC neighborhoods against your preferences — commute, safety, parks, rent, subway access. Built after too many group chats debating the same tradeoffs with no way to compare consistently. Pure Python, no GIS libraries."
+        answer: "It's an interactive map that lets you score NYC neighborhoods against your own priorities like subway access, safety, proximity to schools, parks, rent, and more. The idea came from a real pain point: apartment hunting with friends where everyone had different tradeoffs and no consistent way to compare. The scoring engine is all Python with no external GIS libraries, so it runs anywhere."
     },
     {
         question: "What's the cooking-p5 project?",
-        answer: "Interactive cooking game in p5.js with hand-drawn Procreate art. Group project — the hard part was coordination, not code, so we locked in shared conventions and a branching workflow early."
+        answer: "Interactive cooking game in p5.js with hand-drawn Procreate art. It was a group project! The hardest part was coordination, not code, so we locked in shared conventions and a branching workflow early."
     },
     {
         question: "What's the modified-tiktok project? What's the TikTok tool?",
-        answer: "A tool to watch TikTok links without the app. Built it after deleting TikTok but still getting links from friends. Still use it almost every day."
+        answer: "A tool to watch TikTok links without the app. I built it after deleting TikTok but I was still getting sent Tiktok videos from friends. I wanted to view those individual videos without reinstalling the app."
     },
     {
         question: "What's the spotify bot? What's the spotify-automation-bot?",
@@ -79,7 +79,7 @@ window.chatbotQA = [
     },
     {
         question: "What's the microgpt project? What's experimenting-microgpt?",
-        answer: "Exploring lightweight transformer architecture and inference optimization with MicroGPT, inspired by Andrej Karpathy's work."
+        answer: "Exploring some lightweight transformer architecture and inference optimization with MicroGPT. Forked from Andrej Karpathy."
     },
     {
         question: "What's farming-p5? Tell me about the farming game.",
@@ -94,16 +94,12 @@ window.chatbotQA = [
         answer: "You can email me at yanbmia@gmail.com. Additional contact information can be found in the navigation."
     },
     {
-        question: " What roles are you interested in?",
+        question: "What roles are you interested in?",
         answer: "Looking for data science and PM-adjacent roles. I want to build on my background in CSS and hands-on experience with data, dashboards, and product-facing tools."
     },
         {
         question: "What are you passionate about?",
         answer: "I have deep curiosity and desire to understand how people behave. I love building tools that make people's lives easier."
-    },
-        {
-        question: "Describe yourself.",
-        answer: "Curious, driven, and creative."
     }, 
     {
         question: "Explain your problem solving process.",
