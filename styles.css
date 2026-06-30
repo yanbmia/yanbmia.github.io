@@ -87,10 +87,6 @@ h4 {
     color: #ffffff;
 }
 
-.relevant-courses h4 {
-    color: #c0c7ff;
-}
-
 p { margin: 0; }
 
 a {
@@ -340,13 +336,18 @@ a {
 .modal {
     display: none;
     position: fixed;
-    z-index: 2000;
+    z-index: 3000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(5px);
+    transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.chatbot-open .modal {
+    width: calc(100% - 380px);
 }
 
 .modal.active {
@@ -543,6 +544,186 @@ a {
 
 .contact-info p {
     margin-bottom: 1rem;
+}
+
+/* Chatbot floating toggle button */
+.chatbot-toggle {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 4000;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 2px solid rgba(192, 199, 255, 0.5);
+    background: #111;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    box-shadow: 0 4px 20px rgba(192, 199, 255, 0.15);
+}
+
+.chatbot-toggle:hover {
+    transform: scale(1.1);
+    border-color: #c0c7ff;
+}
+
+/* Chatbot side panel */
+.chatbot-panel {
+    position: fixed;
+    top: 0;
+    right: -420px;
+    width: 380px;
+    height: 100vh;
+    z-index: 4000;
+    background: #0a0a0a;
+    border-left: 2px solid rgba(192, 199, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    box-sizing: border-box;
+    transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.chatbot-panel.open {
+    right: 0;
+}
+
+body.chatbot-open {
+    margin-right: 380px;
+    transition: margin-right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    transition: margin-right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.chatbot-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    color: #c0c7ff;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.chatbot-panel-close {
+    background: none;
+    border: none;
+    color: #c0c7ff;
+    font-size: 1.75rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    transition: color 0.2s ease;
+}
+
+.chatbot-panel-close:hover {
+    color: #ffffff;
+}
+
+.chatbot-subtitle {
+    color: #aaa;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    font-family: 'Chivo Mono', monospace;
+}
+
+.chatbot-container {
+    flex: 1;
+    border: 2px solid rgba(192, 199, 255, 0.3);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.chat-log {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    min-height: 0;
+}
+
+.chat-message {
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    max-width: 85%;
+    word-wrap: break-word;
+    font-family: 'Chivo Mono', monospace;
+}
+
+.chat-message.bot {
+    background: rgba(192, 199, 255, 0.1);
+    color: #ffffff;
+    align-self: flex-start;
+    border: 1px solid rgba(192, 199, 255, 0.2);
+}
+
+.chat-message.user {
+    background: #c0c7ff;
+    color: #000000;
+    align-self: flex-end;
+}
+
+.chat-status {
+    color: #9da9ff;
+    font-style: italic;
+    font-size: 0.85rem;
+}
+
+.chat-form {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+}
+
+.chat-form input {
+    flex: 1;
+    padding: 0.6rem 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(192, 199, 255, 0.3);
+    border-radius: 4px;
+    color: #ffffff;
+    font-family: 'Chivo Mono', monospace;
+    font-size: 0.875rem;
+}
+
+.chat-form input:focus {
+    outline: none;
+    border-color: #c0c7ff;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.chat-form input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.chat-form .submit-btn {
+    font-size: 1.4rem;
+    padding: 0rem 0.6rem;
+    line-height: 1;
+}
+
+.chat-form .submit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
 }
 
 /* Mobile */

@@ -26,29 +26,52 @@
     <section id="more">
         <h1>about me</h1>
         <h2>background</h2>
-            <p>I’m a first-generation American from Brooklyn, New York, born to a Trinidadian mom and a Chinese dad.</p>
+            <p>I’m a first-generation American from Brooklyn, New York.</p>
             <br>
             <p>I use data and code to understand how people behave and apply that to real product and business decisions.</p>
             <br>
             <p>I'm eager to learn more, so I can build better.</p>
             <br>
             <p>Outside of work, I enjoy weightlifting, photography, and hiking.</p>
-
-        <br><br>
+        <hr class="custom-line">
         <h2>education</h2>
-            <p>B.A., New York University &mdash; concentration in computational social science</p>
+            <h4>New York University &mdash; B.A. in Computational Social Science</h4>
             <br>
-            <div class="relevant-courses">
-                <i><h4>Relevant Courses:</h4></i>
+                <i><p style="color: #c0c7ff;">Relevant Courses:</p></i>
                 <p>- Data Structures & Algorithms, Computer Systems Organization, Interactive Computing</p>
                 <p>- Decision Models & Case Analysis, Data Science for Business, Sustainability For Competitive Advantage</p>
                 <p>- Statistics for Social Research, Critical Data Studies, AI Ethics</p>
-            </div>
+            <br><br>
+            <h4>Stuyvesant High School</h4>
     </section>
     </main>
+    <!-- Floating chatbot toggle button -->
+    <button id="chatbotToggle" class="chatbot-toggle" aria-label="Open chatbot">💬</button>
+
+    <!-- Chatbot side panel -->
+    <div id="chatbotPanel" class="chatbot-panel">
+        <div class="chatbot-panel-header">
+            <span>Learn More</span>
+            <button id="chatbotClose" class="chatbot-panel-close" aria-label="Close">&times;</button>
+        </div>
+        <div class="chatbot-container">
+            <div id="chatLog" class="chat-log">
+                <div class="chat-message bot">
+                    <span class="chat-status" id="chatStatus">loading model...</span>
+                </div>
+            </div>
+            <form id="chatForm" class="chat-form">
+                <input type="text" id="chatInput" placeholder="ask a question..." autocomplete="off" disabled>
+                <button type="submit" class="submit-btn" id="chatSubmit" disabled>↑</button>
+            </form>
+        </div>
+    </div>
+
     <footer>
         <p>thanks for visiting :)</p>
     </footer>
+    <script src="chatbot-data.js"></script>
     <script src="script.js"></script>
+    <script type="module" src="chatbot.js"></script>
 </body>
 </html>
