@@ -72,31 +72,34 @@
             </form>
         </div>
     </div>
+    
+   <!-- Floating chatbot toggle button -->
+    <button id="chatbotToggle" class="chatbot-toggle" aria-label="Open chatbot">💬</button>
+
+    <!-- Chatbot side panel -->
+    <div id="chatbotPanel" class="chatbot-panel">
+        <div class="chatbot-panel-header">
+            <span>Learn More</span>
+            <button id="chatbotClose" class="chatbot-panel-close" aria-label="Close">&times;</button>
+        </div>
+        <div class="chatbot-container">
+            <div id="chatLog" class="chat-log">
+                <div class="chat-message bot">
+                    <span class="chat-status" id="chatStatus">loading model...</span>
+                </div>
+            </div>
+            <form id="chatForm" class="chat-form">
+                <input type="text" id="chatInput" placeholder="ask a question..." autocomplete="off" disabled>
+                <button type="submit" class="submit-btn" id="chatSubmit" disabled>↑</button>
+            </form>
+        </div>
+    </div>
 
     <footer>
         <p>thanks for visiting :)</p>
     </footer>
-
     <script src="chatbot-data.js"></script>
     <script src="script.js"></script>
-    <script>
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // Create mailto link with pre-filled content
-            const subject = encodeURIComponent('Contact from ' + email);
-            const body = encodeURIComponent('From: ' + email + '\n\n' + message);
-            const mailtoLink = `mailto:yanbmia@gmail.com?subject=${subject}&body=${body}`;
-            
-            // Open email client
-            window.location.href = mailtoLink;
-            
-            // Optional: Clear the form after submission
-            this.reset();
-        });
-    </script>
+    <script type="module" src="chatbot.js"></script>
 </body>
 </html>
