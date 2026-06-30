@@ -26,11 +26,11 @@ window.chatbotQA = [
         answer: "Brooklyn, New York!"
     },
     {
-        question: "Tell me about yourself. What is your background? Bio",
+        question: "Tell me about yourself. What is your background? Bio?",
         answer: "I'm first-gen American. My mom is from Trinidad, and my dad is from China. I have a passion for weightlifting, photography, and hiking. Last place I hiked was Mount Rainer :) "
     },
     {
-        question: "What are your data skills? What do you know for data science?",
+        question: "Skills? What are your data skills? What do you know for data science?",
         answer: "I have extensive experience with Python, SQL, Power BI, Tableau, R, and Excel."
     },
     {
@@ -92,10 +92,6 @@ window.chatbotQA = [
     {
         question: "How do I contact you? How can I reach you? What's your email?",
         answer: "You can email me at yanbmia@gmail.com. Additional contact information can be found in the navigation."
-    },
-    {
-        question: "What roles are you interested in?",
-        answer: "Looking for data science and PM-adjacent roles. I want to build on my background in CSS and hands-on experience with data, dashboards, and product-facing tools."
     },
         {
         question: "What are you passionate about?",
