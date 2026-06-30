@@ -59,8 +59,9 @@ const projectData = {
     'modified-tiktok': {
         title: 'modified-tiktok-link',
         description: 'A tool that allows users to view TikTok content without requiring the TikTok app.',
-        reflection: '',
-        link: 'https://github.com/yanbmia/Modified-Tiktok-Link'
+        reflection: 'I built this because I deleted TikTok off my phone but kept getting links from friends with no way to watch them :( I still use it almost every day, which is the best validation for building something yourself.',
+        link: 'https://github.com/yanbmia/Modified-Tiktok-Link',
+        playLink: 'https://yanbmia.github.io/Modified-Tiktok-Link/'
     },
     'spotify-bot': {
         title: 'spotify-automation-bot',
