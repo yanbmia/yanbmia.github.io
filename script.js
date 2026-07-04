@@ -59,7 +59,7 @@ const projectData = {
     'modified-tiktok': {
         title: 'modified-tiktok-link',
         description: 'A tool that allows users to view TikTok content without requiring the TikTok app.',
-        reflection: 'I built this because I deleted TikTok off my phone but kept getting links from friends with no way to watch them :( I still use it almost every day, which is the best validation for building something yourself.',
+        reflection: '',
         link: 'https://github.com/yanbmia/Modified-Tiktok-Link',
         playLink: 'https://yanbmia.github.io/Modified-Tiktok-Link/'
     },
@@ -100,10 +100,18 @@ const projectData = {
         link: 'https://github.com/yanbmia/experimenting-microgpt'
     },
     'farming-p5': {
+        title: 'farming-p5',
         description: 'A farming simulation game inspired by Stardew Valley, built using p5.js. Features crop management, seasonal cycles, and interactive gameplay mechanics.',
         reflection: '',
         link: 'https://github.com/yanbmia/farming-p5',
         playLink: 'https://yanbmia.github.io/farming-p5/'
+    },
+    'social-data-portfolio': {
+        title: 'social-data-portfolio',
+        description: 'Cross-national analysis of gender role attitudes and life satisfaction using World Values Survey Wave 7 data (~11,000 respondents, 6 countries). Tests whether gender-role attitudes relate to life satisfaction, and whether that relationship is moderated by country.',
+        reflection: '',
+        link: 'https://github.com/yanbmia/social-data-portfolio',
+        playLink: '/WVS_Report.pdf'
     }
 };
 

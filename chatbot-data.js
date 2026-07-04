@@ -86,8 +86,12 @@ window.chatbotQA = [
         answer: "Stardew Valley-inspired farming sim built with p5.js — crop management, seasonal cycles, interactive gameplay. Built it to get more comfortable with p5.js's animation and game-loop model."
     },
     {
+        question: "What's the social-data-portfolio project? Tell me about the World Values Survey analysis.",
+        answer: "Cross-national R analysis using World Values Survey Wave 7 data (~11,000 respondents, 6 countries) — testing whether gender-role attitudes relate to life satisfaction, and whether that relationship varies by country. Used OLS regression, interaction/moderation models, cluster-robust standard errors, and an ordinal logistic regression as a robustness check."
+    },
+    {
         question: "What projects have you built? List your projects.",
-        answer: "airbnb-albany-pricing, proximity, experimenting-microgpt, farming-p5, cooking-p5, modified-tiktok-link... Click any card in the project section to see more."
+        answer: "airbnb-albany-pricing, proximity, social-data-portfolio, experimenting-microgpt, farming-p5, cooking-p5, modified-tiktok-link... Click any card in the project section to see more."
     },
     {
         question: "How do I contact you? How can I reach you? What's your email?",
