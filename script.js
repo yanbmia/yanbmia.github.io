@@ -44,7 +44,7 @@ const projectData = {
     },
     'proximity': {
         title: 'proximity',
-        description: 'An interactive map that shades NYC neighborhoods based on how well they match your preferences — proximity to NYU/Columbia, safety, parks, grocery chains, subway access, rent, and bikeshare coverage.',
+        description: 'An interactive map that shades NYC neighborhoods based on how well they match your preferences. Proximity to NYU/Columbia, safety, parks, grocery chains, subway access, rent, and bikeshare coverage.',
         reflection: '',
         link: 'https://github.com/yanbmia/proximity',
         playLink: 'https://yanbmia.github.io/proximity/'
@@ -80,18 +80,6 @@ const projectData = {
         description: 'An application that utilizes weather API data provides personalized packing recommendations based on destination and travel dates.',
         reflection: '',
         link: 'https://github.com/yanbmia/weather-packed'
-    },
-    'snakes-ladders': {
-        title: 'snakes-and-ladders',
-        description: 'A Python implementation of the classic board game Snakes and Ladders. This project recreates the traditional game experience with digital gameplay mechanics and player interaction.',
-        reflection: '',
-        link: 'https://github.com/yanbmia/snakes-and-ladders'
-    },
-    'dancing-ducks': {
-        title: 'project-dancing-ducks',
-        description: 'A portfolio website built using a virtual environment and deployed on DigitalOcean. Utilizes server configuration, deployment practices, and cloud hosting.',
-        reflection: '',
-        link: 'https://github.com/yanbmia/project-dancing-ducks'
     },
     'experimenting-microgpt': {
         title: 'experimenting-microgpt',
