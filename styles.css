@@ -747,6 +747,49 @@ body {
     }
 }
 
+/* Courses toggle */
+.courses-chip {
+    display: inline-block;
+    font-size: 0.65rem;
+    padding: 0.15rem 0.5rem;
+    border: 1px solid rgba(192, 199, 255, 0.35);
+    border-radius: 20px;
+    color: #9da9ff;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-left: 0.4rem;
+    letter-spacing: 0.03em;
+    transition: border-color 0.2s ease, color 0.2s ease;
+    user-select: none;
+}
+
+.courses-chip:hover {
+    border-color: #c0c7ff;
+    color: #c0c7ff;
+}
+
+.courses-drawer {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    padding-left: 0.5rem;
+    border-left: 2px solid rgba(192, 199, 255, 0.2);
+    margin-top: 0;
+}
+
+.courses-drawer.open {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 0.75rem;
+}
+
+.courses-drawer p {
+    margin-bottom: 0.4rem;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
 footer {
     text-align: center;
     padding: 3rem 1rem;

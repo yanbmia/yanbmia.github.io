@@ -23,25 +23,25 @@
         </nav>
     </header>
     <main>
-    <section id="more">
+    <section id="more" class="hidden-fade">
         <h1>about me</h1>
         <h2>background</h2>
-            <p>I’m a first-generation American from Brooklyn, New York.</p>
+            <h4>I’m a first-generation American from Brooklyn, New York.</h4>
             <br>
-            <p>I use data and code to understand how people behave and apply that to real product and business decisions.</p>
+            <h4>I use data and code to understand how people behave and apply that to real product and business decisions.</h4>
+            <h4>I'm eager to learn more, so I can build better!</h4>
             <br>
-            <p>I'm eager to learn more, so I can build better.</p>
-            <br>
-            <p>Outside of work, I enjoy weightlifting, photography, and hiking.</p>
+            <h4>Outside of work, I enjoy weightlifting, photography, and hiking.</h4>
         <hr class="custom-line">
         <h2>education</h2>
-            <h4>New York University &mdash; B.A. in Computational Social Science</h4>
-            <br>
+            <h4>New York University &mdash; B.A. in Computational Social Science <span class="courses-chip" id="nyuToggle">coursework</span></h4>
+            <div class="courses-drawer" id="coursesDrawer">
                 <i><p style="color: #c0c7ff;">Relevant Courses:</p></i>
-                <p>- Data Structures & Algorithms, Computer Systems Organization, Interactive Computing</p>
-                <p>- Decision Models & Case Analysis, Data Science for Business, Sustainability For Competitive Advantage</p>
-                <p>- Statistics for Social Research, Critical Data Studies, AI Ethics</p>
-            <br><br>
+                <p>Data Structures & Algorithms, Computer Systems Organization, Interactive Computing</p>
+                <p>Decision Models & Case Analysis, Data Science for Business, Sustainability For Competitive Advantage</p>
+                <p>Statistics for Social Research, Critical Data Studies, AI Ethics</p>
+            </div>
+            <br>
             <h4>Stuyvesant High School</h4>
     </section>
     </main>
@@ -73,5 +73,12 @@
     <script src="chatbot-data.js"></script>
     <script src="script.js"></script>
     <script type="module" src="chatbot.js"></script>
+    <script>
+        const nyuToggle = document.getElementById('nyuToggle');
+        const coursesDrawer = document.getElementById('coursesDrawer');
+        nyuToggle.addEventListener('click', () => {
+            coursesDrawer.classList.toggle('open');
+        });
+    </script>
 </body>
 </html>
