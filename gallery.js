@@ -8,10 +8,20 @@ const PHOTOS = [
     { id: 'img_2582', w: 4128, h: 5504, place: 'haedong yonggungsa, busan',          coords: [35.188989, 129.223206] },
     { id: 'img_2603', w: 8064, h: 6048, place: 'haedong yonggungsa, busan',          coords: [35.188939, 129.223175] },
     { id: 'img_2763', w: 3024, h: 4032, place: null, coords: null },
-    { id: 'img_2777', w: 1576, h: 2100, place: null, coords: null },
     { id: 'img_3091', w: 4032, h: 3024, place: 'jusangjeolli cliff, jeju',           coords: [33.236814, 126.425858] },
     { id: 'img_3150', w: 3919, h: 2939, place: 'jusangjeolli cliff, jeju',           coords: [33.237319, 126.425378] },
     { id: 'img_3396', w: 4032, h: 3024, place: 'yangmingshan, taipei',               coords: [25.163931, 121.5755] },
+    { id: 'img_3332', w: 1600, h: 1200, place: 'yangmingshan, taipei',               coords: [25.163931, 121.5755]},
+    { id: 'img_1237', w: 4032, h: 3024, place: 'mount rainier national park',        coords: [46.751561, -121.559381] },
+    { id: 'img_1476', w: 2856, h: 3808, place: 'olympic national park',              coords: [48.050633, -123.788742] },
+    { id: 'img_4459', w: 4032, h: 3024, place: 'bernese oberland, switzerland',      coords: [46.769986, 8.425419] },
+    { id: 'img_4494', w: 2268, h: 4032, place: 'bernese oberland, switzerland',      coords: [46.770825, 8.426544] },
+    { id: 'img_6640', w: 3024, h: 4032, place: 'paris, france',                      coords: [48.852731, 2.352808] },
+    { id: 'img_8612', w: 4032, h: 3024, place: 'kamakura, japan',                    coords: [35.312122, 139.533294] },
+    { id: 'img_8194', w: 4032, h: 3024, place: 'quebec city, canada',                coords: [46.813708, -71.203711] },
+    { id: 'img_3893', w: 3024, h: 4032, place: 'washington, d.c.',                   coords: [38.888694, -77.010842] },
+    { id: 'img_0856', w: 3024, h: 4032, place: 'upper west side, manhattan',         coords: [40.778694, -73.971589] },
+    { id: 'img_7413', w: 4032, h: 3024, place: 'long island city, queens',           coords: [40.74395, -73.924622] },
 ];
 
 const WEB_DIR = 'photo-gallery/web/';
