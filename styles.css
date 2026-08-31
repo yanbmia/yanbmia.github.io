@@ -195,13 +195,16 @@ a {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-.interactive-text span:nth-child(1) { animation-delay: 0.1s; }
-.interactive-text span:nth-child(2) { animation-delay: 0.2s; }
-.interactive-text span:nth-child(3) { animation-delay: 0.3s; }
-.interactive-text span:nth-child(4) { animation-delay: 0.4s; }
-.interactive-text span:nth-child(5) { animation-delay: 0.5s; }
-.interactive-text span:nth-child(6) { animation-delay: 0.6s; }
-.interactive-text span:nth-child(7) { animation-delay: 0.7s; }
+/* Wider stagger (0.18s apart) so each letter reads as its own distinct
+   drop instead of blurring into the next — at 0.1s apart, five letters
+   fired within half a second was too tight to register as sequential. */
+.interactive-text span:nth-child(1) { animation-delay: 0.00s; }
+.interactive-text span:nth-child(2) { animation-delay: 0.18s; }
+.interactive-text span:nth-child(3) { animation-delay: 0.36s; }
+.interactive-text span:nth-child(4) { animation-delay: 0.54s; }
+.interactive-text span:nth-child(5) { animation-delay: 0.72s; }
+.interactive-text span:nth-child(6) { animation-delay: 0.90s; }
+.interactive-text span:nth-child(7) { animation-delay: 1.08s; }
 
 .interactive-text span:hover {
     transform: scale(1.3) translateY(-10px);
@@ -844,7 +847,11 @@ body.chatbot-open .modal {
     top: 0;
     right: -420px;
     width: 380px;
+    /* 100vh on mobile browsers measures the viewport as if the address bar
+       were hidden, so the panel runs taller than what's actually visible —
+       100dvh tracks the real visible area. Fallback for older browsers. */
     height: 100vh;
+    height: 100dvh;
     z-index: 4000;
     background: #0a0a0a;
     border-left: 2px solid rgba(192, 199, 255, 0.3);
@@ -945,6 +952,49 @@ body {
     color: #9da9ff;
     font-style: italic;
     font-size: 0.85rem;
+}
+
+/* Suggestion chips — clickable follow-up questions shown after a bot
+   answer (or as starter prompts on load / a fallback recovery aid). Kept
+   visually distinct from .chat-message so they read as "click me" rather
+   than more bot text. */
+.chat-suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-self: flex-start;
+    max-width: 100%;
+}
+
+.chat-suggestion-chip {
+    font-family: 'Chivo Mono', monospace;
+    font-size: 0.8rem;
+    padding: 0.45rem 0.85rem;
+    border-radius: 999px;
+    border: 1px solid rgba(192, 199, 255, 0.45);
+    background: transparent;
+    color: #c0c7ff;
+    cursor: pointer;
+    line-height: 1.3;
+    text-align: left;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.chat-suggestion-chip:hover {
+    background: rgba(192, 199, 255, 0.12);
+    border-color: #c0c7ff;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.chat-suggestion-chip:active {
+    transform: translateY(0);
+}
+
+.chat-suggestion-chip:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
 }
 
 .chat-form {
@@ -1075,4 +1125,44 @@ footer .footer-coords {
     .chatbot-panel { width: 100vw; right: -100vw; }
     body.chatbot-open { margin-right: 0; }
     body.chatbot-open .modal { width: 100%; }
+
+    /* Smaller, safe-area-aware toggle button — the desktop 56px FAB
+       pinned 2rem from the edge sat too close to the home-indicator /
+       gesture-bar area on phones and felt oversized on a small screen. */
+    .chatbot-toggle {
+        width: 48px;
+        height: 48px;
+        font-size: 1.25rem;
+        bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+        right: 1.25rem;
+    }
+
+    /* Tighten the panel itself so it reads as a compact mobile sheet
+       instead of the desktop layout stretched to fill the screen. */
+    .chatbot-panel {
+        padding: 1rem;
+        padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+    }
+
+    .chatbot-panel-header {
+        font-size: 1rem;
+    }
+
+    .chatbot-subtitle {
+        font-size: 0.8rem;
+    }
+
+    .chat-message {
+        font-size: 0.85rem;
+        max-width: 90%;
+    }
+
+    .chat-suggestion-chip {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.7rem;
+    }
+
+    .chat-form input {
+        font-size: 16px; /* prevents iOS Safari auto-zoom on focus */
+    }
 }

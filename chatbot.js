@@ -12,6 +12,20 @@ import { pipeline, cos_sim } from 'https://cdn.jsdelivr.net/npm/@huggingface/tra
 // variants.
 const OWNER_NAMES = ['mia'];
 
+// Shown as clickable suggestion chips: (a) on first load, before the visitor
+// has typed anything, and (b) as a recovery aid whenever a question falls
+// through to the fallback message below the confidence threshold. Also used
+// as the default follow-up set for any intent that doesn't define its own
+// `followUps` in chatbot-data.js.
+const STARTER_QUESTIONS = [
+    "what do you do?",
+    "what projects have you built?",
+    "how do I contact you?"
+];
+
+const GREETING_MESSAGE = "ask me about my background, skills, or projects.";
+const FALLBACK_MESSAGE = "I'm not sure about that one. Try one of these, or ask something else:";
+
 // Greeting words that may prefix a question ("hey, what do you do?").
 const GREETING_WORDS = [
     'hi', 'hii', 'hiya', 'hello', 'helo', 'hey', 'heya', 'hai', 'yo',
@@ -192,29 +206,76 @@ const chatSubmit = document.getElementById('chatSubmit');
 let extractor = null;
 let qaBank = [];
 
+// Guards against a second question being submitted (by typing or by
+// clicking a suggestion chip) while one is still being embedded/matched.
+let isProcessing = false;
+
 const HISTORY_KEY = 'chatbot_history';
 
-function saveMessage(text, sender) {
+// `followUps`, when provided, is persisted alongside a bot message so that
+// re-opening the chat later (see restoreHistory) can redraw the suggestion
+// chips under the most recent answer instead of losing them on reload.
+function saveMessage(text, sender, followUps) {
     const history = JSON.parse(sessionStorage.getItem(HISTORY_KEY) || '[]');
-    history.push({ text, sender });
+    const entry = { text, sender };
+    if (followUps && followUps.length) entry.followUps = followUps;
+    history.push(entry);
     sessionStorage.setItem(HISTORY_KEY, JSON.stringify(history));
 }
 
-function addMessage(text, sender, persist = true) {
+function addMessage(text, sender, persist = true, followUps = null) {
     const msg = document.createElement('div');
     msg.classList.add('chat-message', sender);
     msg.textContent = text;
     chatLog.appendChild(msg);
     chatLog.scrollTop = chatLog.scrollHeight;
-    if (persist) saveMessage(text, sender);
+    if (persist) saveMessage(text, sender, followUps);
     return msg;
+}
+
+// Suggestion chip UI. Kept as small standalone helpers so the "show 2-3
+// clickable follow-up questions" behavior is easy to find and change
+// independently of the matching logic below.
+function clearSuggestions() {
+    const existing = chatLog.querySelector('.chat-suggestions');
+    if (existing) existing.remove();
+}
+
+function renderSuggestions(questions) {
+    clearSuggestions();
+    if (!questions || questions.length === 0) return;
+
+    const row = document.createElement('div');
+    row.className = 'chat-suggestions';
+    row.setAttribute('role', 'group');
+    row.setAttribute('aria-label', 'suggested questions');
+
+    questions.forEach((q) => {
+        const chip = document.createElement('button');
+        chip.type = 'button'; // never submits chatForm
+        chip.className = 'chat-suggestion-chip';
+        chip.textContent = q;
+        chip.addEventListener('click', () => {
+            if (isProcessing) return;
+            handleQuestion(q);
+        });
+        row.appendChild(chip);
+    });
+
+    chatLog.appendChild(row);
+    chatLog.scrollTop = chatLog.scrollHeight;
 }
 
 function restoreHistory() {
     const history = JSON.parse(sessionStorage.getItem(HISTORY_KEY) || '[]');
-    for (const { text, sender } of history) {
-        addMessage(text, sender, false);
+    let lastBotFollowUps = null;
+    for (const entry of history) {
+        addMessage(entry.text, entry.sender, false);
+        // Only the trailing bot message's chips get redrawn — not every
+        // historical turn's — so we track (and overwrite) as we go.
+        lastBotFollowUps = entry.sender === 'bot' ? (entry.followUps || null) : null;
     }
+    if (lastBotFollowUps) renderSuggestions(lastBotFollowUps);
     return history.length > 0;
 }
 
@@ -260,7 +321,8 @@ async function init() {
         chatStatus.parentElement.remove();
         const hadHistory = restoreHistory();
         if (!hadHistory) {
-            addMessage("ask me about my background, skills, or projects.", 'bot');
+            addMessage(GREETING_MESSAGE, 'bot', true, STARTER_QUESTIONS);
+            renderSuggestions(STARTER_QUESTIONS);
         }
         chatInput.disabled = false;
         chatSubmit.disabled = false;
@@ -272,7 +334,17 @@ async function init() {
 }
 
 async function handleQuestion(question) {
-    // Show the user exactly what they typed...
+    // Ignore a new question (typed or from a suggestion chip) while one is
+    // already in flight, and disable the input for the same reason.
+    if (isProcessing) return;
+    isProcessing = true;
+    chatInput.disabled = true;
+    chatSubmit.disabled = true;
+
+    // Any chips left over from the previous answer are now stale.
+    clearSuggestions();
+
+    // Show the user exactly what they typed (or the chip text they clicked)...
     addMessage(question, 'user');
 
     const thinking = addMessage('...', 'bot', false);
@@ -305,19 +377,35 @@ async function handleQuestion(question) {
         // much higher, so the old floor would let junk through. Tune here.
         const CONFIDENCE_THRESHOLD = 0.5;
         if (best && bestScore >= CONFIDENCE_THRESHOLD) {
-            addMessage(best.answer, 'bot');
+            // Fall back to the global starter set if this intent doesn't
+            // define its own follow-ups, so there's always something to
+            // click next.
+            const followUps = (best.followUps && best.followUps.length)
+                ? best.followUps
+                : STARTER_QUESTIONS;
+            addMessage(best.answer, 'bot', true, followUps);
+            renderSuggestions(followUps);
         } else {
-            addMessage("I'm not sure about that one. Try asking another question.", 'bot');
+            // A miss doubles as a recovery prompt: show the starter
+            // questions again instead of leaving a dead end.
+            addMessage(FALLBACK_MESSAGE, 'bot', true, STARTER_QUESTIONS);
+            renderSuggestions(STARTER_QUESTIONS);
         }
     } catch (err) {
         thinking.remove();
         addMessage('something went wrong answering that. try again?', 'bot');
         console.error('Chatbot query failed:', err);
+    } finally {
+        isProcessing = false;
+        chatInput.disabled = false;
+        chatSubmit.disabled = false;
+        chatInput.focus();
     }
 }
 
 chatForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    if (isProcessing) return;
     const question = chatInput.value.trim();
     if (!question) return;
     chatInput.value = '';
