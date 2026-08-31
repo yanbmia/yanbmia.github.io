@@ -13,40 +13,74 @@
 <body>
     <header class="header">
         <nav>
-            <a href="https://yanbmia.github.io/">
+            <a href="https://yanbmia.github.io/" aria-label="home">
                 <img src="logo.png" alt="MIA" class="nav-logo">
             </a>
             <ul>
-                <li><a href="/more.html">MORE</a></li>
+                <li><a href="/more.html" aria-current="page">MORE</a></li>
                 <li><a href="/contact.html">CONTACT</a></li>
             </ul>
         </nav>
     </header>
     <main>
-    <section id="more" class="hidden-fade">
-        <h1>about me</h1>
-        <h2>background</h2>
-            <h4>I’m a first-generation American from Brooklyn, New York.</h4>
-            <br>
-            <h4>I use data and code to understand how people behave and apply that to real product and business decisions.</h4>
-            <h4>I'm eager to learn more, so I can build better!</h4>
-            <br>
-            <h4>Outside of work, I enjoy weightlifting, photography, and hiking.</h4>
-        <hr class="custom-line">
-        <h2>education</h2>
-            <h4>New York University &mdash; B.A. in Computational Social Science <span class="courses-chip" id="nyuToggle">coursework</span></h4>
-            <div class="courses-drawer" id="coursesDrawer">
-                <i><p style="color: #c0c7ff;">Relevant Courses:</p></i>
-                <p>Data Structures & Algorithms, Computer Systems Organization, Interactive Computing</p>
-                <p>Decision Models & Case Analysis, Data Science for Business, Sustainability For Competitive Advantage</p>
-                <p>Statistics for Social Research, Critical Data Studies, AI Ethics</p>
+        <section id="more" class="hero hidden-fade">
+            <h1>about me</h1>
+
+            <dl class="meta-grid">
+                <dt>from</dt>
+                <dd>first-generation American, born &amp; raised in Brooklyn, New York</dd>
+
+                <dt>work</dt>
+                <dd>I use data and code to understand how people behave, and apply that to real product and business decisions</dd>
+
+                <dt>ethos</dt>
+                <dd>eager to learn more, so I can build better</dd>
+
+                <dt>interests</dt>
+                <dd>weightlifting, photography, hiking</dd>
+            </dl>
+        </section>
+
+        <div class="section-gap" aria-hidden="true"></div>
+
+        <section class="hidden-fade">
+            <h2 class="section-head">education<span class="sec-rule" aria-hidden="true"></span></h2>
+
+            <div class="edu-item">
+                <dd>New York University &mdash; B.A. in Computational Social Science
+                    <button class="courses-chip" id="nyuToggle" aria-expanded="false" aria-controls="coursesDrawer">coursework</button>
+                </dd>
+                <div class="courses-drawer" id="coursesDrawer">
+                    <!-- <i><p style="color: #c0c7ff;">Relevant Courses:</p></i> -->
+                    <p>Data Structures &amp; Algorithms, Computer Systems Organization, Interactive Computing</p>
+                    <p>Decision Models &amp; Case Analysis, Data Science for Business, Sustainability For Competitive Advantage</p>
+                    <p>Statistics for Social Research, Critical Data Studies, AI Ethics</p>
+                </div>
             </div>
-            <br>
-            <h4>Stuyvesant High School</h4>
-    </section>
+            <div class="edu-item">
+                <dd>Stuyvesant High School</dd>
+            </div>
+        </section>
+
+        <div class="section-gap" aria-hidden="true"></div>
+
+        <section class="hidden-fade">
+            <h2 class="section-head">gallery<span class="sec-rule" aria-hidden="true"></span></h2>
+            <div id="galleryWall" class="gallery-wall"></div>
+        </section>
     </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" hidden>
+        <button id="lightboxClose" class="lightbox-close" aria-label="close photo">&times;</button>
+        <figure role="dialog" aria-modal="true" aria-labelledby="lightboxCap">
+            <img id="lightboxImg" src="" alt="">
+            <figcaption id="lightboxCap" class="lightbox-cap"></figcaption>
+        </figure>
+    </div>
+
     <!-- Floating chatbot toggle button -->
-    <button id="chatbotToggle" class="chatbot-toggle" aria-label="Open chatbot">💬</button>
+    <button id="chatbotToggle" class="chatbot-toggle" aria-label="Open chatbot">&#128172;</button>
 
     <!-- Chatbot side panel -->
     <div id="chatbotPanel" class="chatbot-panel">
@@ -62,7 +96,7 @@
             </div>
             <form id="chatForm" class="chat-form">
                 <input type="text" id="chatInput" placeholder="ask a question..." autocomplete="off" disabled>
-                <button type="submit" class="submit-btn" id="chatSubmit" disabled>↑</button>
+                <button type="submit" class="submit-btn" id="chatSubmit" disabled>&#8593;</button>
             </form>
         </div>
     </div>
@@ -72,12 +106,14 @@
     </footer>
     <script src="chatbot-data.js"></script>
     <script src="script.js"></script>
+    <script src="gallery.js"></script>
     <script type="module" src="chatbot.js"></script>
     <script>
         const nyuToggle = document.getElementById('nyuToggle');
         const coursesDrawer = document.getElementById('coursesDrawer');
         nyuToggle.addEventListener('click', () => {
-            coursesDrawer.classList.toggle('open');
+            const open = coursesDrawer.classList.toggle('open');
+            nyuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
         });
     </script>
 </body>

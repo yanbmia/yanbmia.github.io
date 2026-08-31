@@ -13,46 +13,58 @@
 <body>
     <header class="header">
         <nav>
-            <a href="https://yanbmia.github.io/">
+            <a href="https://yanbmia.github.io/" aria-label="home">
                 <img src="logo.png" alt="MIA" class="nav-logo">
             </a>
             <ul>
                 <li><a href="/more.html">MORE</a></li>
-                <li><a href="/contact.html">CONTACT</a></li>
+                <li><a href="/contact.html" aria-current="page">CONTACT</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="contact" class="hidden-fade">
+        <section id="contact" class="hero hidden-fade">
             <h1>contact me</h1>
-        <section id="findme" class="hidden-fade">
-            <div class="social-links">
-                <span class="link-blue"><a href="https://linkedin.com/in/yanbmia" target="_blank">linkedin</a></span>
-                <span class="link-green"><a href="https://github.com/yanbmia" target="_blank">github</a></span>
-                <br>
-                or reach out directly: <span class="link-red"><a href="mailto:yanbmia@gmail.com">yanbmia@gmail.com</a></span>
-            </div>
-        </section>
-            <form id="contact-form" class="contact-form">
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required placeholder="your@email.com">
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="6" required placeholder="your message here..."></textarea>
-                </div>
-                
-                <button type="submit" class="submit-btn">send</button>
-            </form>
 
+            <div class="contact-layout">
+                <div class="contact-links">
+                    <a href="https://linkedin.com/in/yanbmia" target="_blank" class="link-blue">
+                        <span class="cl-key">linkedin</span>
+                        <span>/in/yanbmia</span>
+                        <span class="cl-arrow" aria-hidden="true">&#8594;</span>
+                    </a>
+                    <a href="https://github.com/yanbmia" target="_blank" class="link-green">
+                        <span class="cl-key">github</span>
+                        <span>@yanbmia</span>
+                        <span class="cl-arrow" aria-hidden="true">&#8594;</span>
+                    </a>
+                    <a href="mailto:yanbmia@gmail.com" class="link-red">
+                        <span class="cl-key">email</span>
+                        <span>yanbmia@gmail.com</span>
+                        <span class="cl-arrow" aria-hidden="true">&#8594;</span>
+                    </a>
+                </div>
+
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="your message here..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">send</button>
+                </form>
+            </div>
         </section>
     </main>
 
     <!-- Floating chatbot toggle button -->
-    <button id="chatbotToggle" class="chatbot-toggle" aria-label="Open chatbot">💬</button>
+    <button id="chatbotToggle" class="chatbot-toggle" aria-label="Open chatbot">&#128172;</button>
 
     <!-- Chatbot side panel -->
     <div id="chatbotPanel" class="chatbot-panel">
@@ -68,7 +80,7 @@
             </div>
             <form id="chatForm" class="chat-form">
                 <input type="text" id="chatInput" placeholder="ask a question..." autocomplete="off" disabled>
-                <button type="submit" class="submit-btn" id="chatSubmit" disabled>↑</button>
+                <button type="submit" class="submit-btn" id="chatSubmit" disabled>&#8593;</button>
             </form>
         </div>
     </div>

@@ -13,7 +13,7 @@
 <body>
     <header class="header">
         <nav>
-            <a href="https://yanbmia.github.io/">
+            <a href="https://yanbmia.github.io/" aria-label="home">
                 <img src="logo.png" alt="MIA" class="nav-logo">
             </a>
             <ul>
@@ -24,92 +24,105 @@
     </header>
 
     <main>
-        <section id="about" class="hidden-fade">
+        <section id="about" class="hero hidden-fade">
             <h1 class="interactive-text">
                 <span>m</span><span>i</span><span>a</span>
                 <span>y</span><span>a</span><span>n</span>
             </h1>
 
-            <div class="about-container">
-                <div>
-                    <h4>Hello!</h4>
-                    <br>
-                    <h4>
-                        I'm currently building enterprise data, AI infrastructure, and data governance @ <span class="hover-orange">ConEdison</span>
-                    </h4>
-                    <br>
-                    <h4>
-                        Previously, I studied <span class="hover-violet">Computational Social Science</span> at New York University
-                    </h4>
-                    <br>
-                    <h4>
-                        I love digging into messy data, telling stories with it, and building something new
-                    </h4>
-                </div>
-            </div>
+            <dl class="meta-grid">
+                <dt>current</dt>
+                <dd>building enterprise data, AI infrastructure &amp; data governance @ ConEdison</dd>
+
+                <dt>previous</dt>
+                <dd>computational social science @ New York University</dd>
+
+            </dl>
         </section>
 
-        <hr class="custom-line">
+        <div class="section-gap" aria-hidden="true"></div>
 
         <div id="projects-marker"></div>
-        <h2>projects</h2>
-        <section id="projects" class="projects-grid hidden-fade">
+        <section class="hidden-fade">
+            <h2 class="section-head">projects<span class="sec-rule" aria-hidden="true"></span></h2>
 
-            <div class="glow-on-hover project-card" data-project="airbnb-albany-pricing">
-                <h3>airbnb-albany-pricing</h3>
-                <p>ML model predicting Airbnb occupancy & price in Albany, NY</p>
-            </div>
+            <div id="projects" class="project-index">
+                <button class="index-row project-card" data-project="airbnb-albany-pricing">
+                    <span class="row-num">01</span>
+                    <span class="row-name">airbnb-albany-pricing</span>
+                    <span class="row-desc">ML model predicting Airbnb occupancy &amp; price in Albany, NY</span>
+                    <span class="row-arrow" aria-hidden="true">&#8594;</span>
+                </button>
 
-            <div class="glow-on-hover project-card" data-project="social-data-portfolio">
-                <h3>social-data-portfolio</h3>
-                <p>cross-national analysis of gender role attitudes and life satisfaction</p>
-            </div>
+                <button class="index-row project-card" data-project="social-data-portfolio">
+                    <span class="row-num">02</span>
+                    <span class="row-name">social-data-portfolio</span>
+                    <span class="row-desc">cross-national analysis of gender role attitudes and life satisfaction</span>
+                    <span class="row-arrow" aria-hidden="true">&#8594;</span>
+                </button>
 
-            <div class="glow-on-hover project-card" data-project="proximity">
-                <h3>proximity</h3>
-                <p>interactive map to find your ideal NYC neighborhood</p>
-            </div>
+                <button class="index-row project-card" data-project="proximity">
+                    <span class="row-num">03</span>
+                    <span class="row-name">proximity</span>
+                    <span class="row-desc">interactive map to find your ideal NYC neighborhood</span>
+                    <span class="row-arrow" aria-hidden="true">&#8594;</span>
+                </button>
 
-            <div class="glow-on-hover project-card" data-project="experimenting-microgpt">
-                <h3>experimenting-microgpt</h3>
-                <p>exploratory work (lightweight transformer architecture, inference optimization</p>
-            </div>
+                <button class="index-row project-card" data-project="experimenting-microgpt">
+                    <span class="row-num">04</span>
+                    <span class="row-name">experimenting-microgpt</span>
+                    <span class="row-desc">lightweight transformer architecture &amp; inference optimization</span>
+                    <span class="row-arrow" aria-hidden="true">&#8594;</span>
+                </button>
 
-            <div class="glow-on-hover project-card" data-project="modified-tiktok">
-                <h3>modified-tiktok-link</h3>
-                <p>view tiktok links without the app</p>
-            </div>
+                <button class="index-row project-card" data-project="modified-tiktok">
+                    <span class="row-num">05</span>
+                    <span class="row-name">modified-tiktok-link</span>
+                    <span class="row-desc">view tiktok links without the app</span>
+                    <span class="row-arrow" aria-hidden="true">&#8594;</span>
+                </button>
 
-            <div class="glow-on-hover project-card" data-project="headline-crawler">
-                <h3>headline-crawler</h3>
-                <p>web crawler that navigates and tracks news headlines</p>
-            </div>
+                <button class="index-row project-card" data-project="headline-crawler">
+                    <span class="row-num">06</span>
+                    <span class="row-name">headline-crawler</span>
+                    <span class="row-desc">web crawler that navigates and tracks news headlines</span>
+                    <span class="row-arrow" aria-hidden="true">&#8594;</span>
+                </button>
 
-            <div class="glow-on-hover project-card" data-project="cooking-p5">
-                <h3>cooking-p5</h3>
-                <p>interactive cooking game using p5.js</p>
-            </div>
+                <button class="index-row project-card" data-project="cooking-p5">
+                    <span class="row-num">07</span>
+                    <span class="row-name">cooking-p5</span>
+                    <span class="row-desc">interactive cooking game using p5.js</span>
+                    <span class="row-arrow" aria-hidden="true">&#8594;</span>
+                </button>
 
-            <div class="glow-on-hover project-card" data-project="farming-p5">
-                <h3>farming-p5</h3>
-                <p>farming simulation game using p5.js</p>
-            </div>
+                <button class="index-row project-card" data-project="farming-p5">
+                    <span class="row-num">08</span>
+                    <span class="row-name">farming-p5</span>
+                    <span class="row-desc">farming simulation game using p5.js</span>
+                    <span class="row-arrow" aria-hidden="true">&#8594;</span>
+                </button>
 
-            <div class="glow-on-hover project-card" data-project="spotify-bot">
-                <h3>spotify-automation-bot</h3>
-                <p>automate artist following on Spotify</p>
-            </div>
+                <button class="index-row project-card" data-project="spotify-bot">
+                    <span class="row-num">09</span>
+                    <span class="row-name">spotify-automation-bot</span>
+                    <span class="row-desc">automate artist following on Spotify</span>
+                    <span class="row-arrow" aria-hidden="true">&#8594;</span>
+                </button>
 
-            <div class="glow-on-hover project-card" data-project="weather-packed">
-                <h3>weather-packed</h3>
-                <p>personalized recommendations using weather API data</p>
+                <button class="index-row project-card" data-project="weather-packed">
+                    <span class="row-num">10</span>
+                    <span class="row-name">weather-packed</span>
+                    <span class="row-desc">personalized recommendations using weather API data</span>
+                    <span class="row-arrow" aria-hidden="true">&#8594;</span>
+                </button>
             </div>
         </section>
 
         <!-- Project Modal -->
         <div id="projectModal" class="modal">
-            <div class="modal-content">
-                <span class="modal-close">&times;</span>
+            <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+                <button class="modal-close" aria-label="close">&times;</button>
                 <h2 id="modalTitle"></h2>
                 <p id="modalDescription"></p>
                 <p id="modalReflection" class="modal-reflection"></p>
@@ -120,54 +133,37 @@
             </div>
         </div>
 
-        <hr class="custom-line">
+        <div class="section-gap" aria-hidden="true"></div>
 
         <section id="skills" class="hidden-fade">
-            <h2>skills</h2>
-            <div class="skills-group">
-                <h4 class="skills-label">data</h4>
-                <div class="horizontal-sections">
-                    <div class="text-section">Python</div>
-                    <div class="text-section">SQL</div>
-                    <div class="text-section">Power Bi</div>
-                    <div class="text-section">Tableau</div>
-                    <div class="text-section">R</div>
-                    <div class="text-section">Excel</div>
-                </div>
+            <h2 class="section-head">skills<span class="sec-rule" aria-hidden="true"></span></h2>
+
+            <div class="skills-line">
+                <span class="skills-key">data</span>
+                <p class="skills-vals">
+                    <span>Python</span><span>SQL</span><span>Power BI</span><span>Tableau</span><span>R</span><span>Excel</span>
+                </p>
             </div>
 
-            <div class="skills-group">
-                <h4 class="skills-label">dev</h4>
-                <div class="horizontal-sections">
-                    <div class="text-section">React</div>
-                    <div class="text-section">Javascript</div>
-                    <div class="text-section">HTML/CSS</div>
-                    <div class="text-section">Java</div>
-                    <div class="text-section">Flask</div>
-                    <div class="text-section">MySQL</div>
-                    <div class="text-section">Docker</div>
-                    <div class="text-section">Linux</div>
-                </div>
+            <div class="skills-line">
+                <span class="skills-key">dev</span>
+                <p class="skills-vals">
+                    <span>React</span><span>Javascript</span><span>HTML/CSS</span><span>Java</span><span>Flask</span><span>MySQL</span><span>Docker</span><span>Linux</span>
+                </p>
             </div>
 
-            <div class="skills-group">
-                <h4 class="skills-label">technologies</h4>
-                <div class="horizontal-sections">
-                    <div class="text-section">Jira</div>
-                    <div class="text-section">Salesforce</div>
-                    <div class="text-section">Postman</div>
-                    <div class="text-section">Figma</div>
-                    <div class="text-section">GitHub Co-Pilot</div>
-                    <div class="text-section">Claude</div>
-                    <div class="text-section">Gemini</div>
-                </div>
+            <div class="skills-line">
+                <span class="skills-key">technologies</span>
+                <p class="skills-vals">
+                    <span>Jira</span><span>Salesforce</span><span>Postman</span><span>Figma</span><span>GitHub Co-Pilot</span><span>Claude</span><span>Gemini</span>
+                </p>
             </div>
         </section>
 
     </main>
 
     <!-- Floating chatbot toggle button -->
-    <button id="chatbotToggle" class="chatbot-toggle" aria-label="Open chatbot">💬</button>
+    <button id="chatbotToggle" class="chatbot-toggle" aria-label="Open chatbot">&#128172;</button>
 
     <!-- Chatbot side panel -->
     <div id="chatbotPanel" class="chatbot-panel">
@@ -183,7 +179,7 @@
             </div>
             <form id="chatForm" class="chat-form">
                 <input type="text" id="chatInput" placeholder="ask a question..." autocomplete="off" disabled>
-                <button type="submit" class="submit-btn" id="chatSubmit" disabled>↑</button>
+                <button type="submit" class="submit-btn" id="chatSubmit" disabled>&#8593;</button>
             </form>
         </div>
     </div>
