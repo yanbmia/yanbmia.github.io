@@ -91,5 +91,24 @@
     <script src="chatbot-data.js"></script>
     <script src="script.js"></script>
     <script type="module" src="chatbot.js"></script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Build a mailto: link with the visitor's info pre-filled —
+            // this form has no backend, so "sending" just opens the user's
+            // own email client with the message ready to go.
+            const subject = encodeURIComponent('Contact from ' + email);
+            const body = encodeURIComponent('From: ' + email + '\n\n' + message);
+            const mailtoLink = `mailto:yanbmia@gmail.com?subject=${subject}&body=${body}`;
+
+            window.location.href = mailtoLink;
+
+            this.reset();
+        });
+    </script>
 </body>
 </html>
