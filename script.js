@@ -45,7 +45,7 @@ const projectData = {
     'algo-backtester': {
         title: 'algo-backtester',
         description: 'A daily backtesting engine built from scratch in Python to test whether a 50/200-day moving-average crossover beats simply holding SPY (2004–2024). It didn\'t: buy-and-hold won on return (10.6% vs. 9.2% CAGR), though the crossover took meaningfully less risk (13.5% vs. 19.0% volatility, a -33.7% vs. -55.2% max drawdown).',
-        reflection: 'I wanted to eventually test ML trading signals, but realized I couldn\'t trust any result until I trusted the thing producing it. Backtests are easy to get subtly wrong, and almost every mistake, like using a price before it was knowable, makes results look better, not worse. So I put correctness first: strategies only ever see a point-in-time view of the data, decisions fill at the next bar\'s open rather than the same close that produced the signal, and a dedicated test suite tries to leak future data into the engine on purpose to confirm it can\'t. The headline result isn\'t flattering to the strategy, but that\'s the point: it\'s a transparent, tested baseline rather than a curve-fit win.',
+        reflection: '',
         link: 'https://github.com/yanbmia/algo-backtester'
     },
     'proximity': {
