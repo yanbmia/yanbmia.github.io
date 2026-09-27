@@ -42,6 +42,12 @@ const projectData = {
         reflection: '',
         link: 'https://github.com/yanbmia/airbnb-albany-pricing'
     },
+    'algo-backtester': {
+        title: 'algo-backtester',
+        description: 'A daily backtesting engine built from scratch in Python to test whether a 50/200-day moving-average crossover beats simply holding SPY (2004–2024). It didn\'t: buy-and-hold won on return (10.6% vs. 9.2% CAGR), though the crossover took meaningfully less risk (13.5% vs. 19.0% volatility, a -33.7% vs. -55.2% max drawdown).',
+        reflection: 'I wanted to eventually test ML trading signals, but realized I couldn\'t trust any result until I trusted the thing producing it. Backtests are easy to get subtly wrong, and almost every mistake, like using a price before it was knowable, makes results look better, not worse. So I put correctness first: strategies only ever see a point-in-time view of the data, decisions fill at the next bar\'s open rather than the same close that produced the signal, and a dedicated test suite tries to leak future data into the engine on purpose to confirm it can\'t. The headline result isn\'t flattering to the strategy, but that\'s the point: it\'s a transparent, tested baseline rather than a curve-fit win.',
+        link: 'https://github.com/yanbmia/algo-backtester'
+    },
     'proximity': {
         title: 'proximity',
         description: 'An interactive map that shades NYC neighborhoods based on how well they match your preferences. Proximity to NYU/Columbia, safety, parks, grocery chains, subway access, rent, and bikeshare coverage.',
@@ -62,24 +68,6 @@ const projectData = {
         reflection: '',
         link: 'https://github.com/yanbmia/Modified-Tiktok-Link',
         playLink: 'https://yanbmia.github.io/Modified-Tiktok-Link/'
-    },
-    'spotify-bot': {
-        title: 'spotify-automation-bot',
-        description: 'An automation bot designed to streamline artist following on Spotify. ',
-        reflection: '',
-        link: 'https://github.com/yanbmia/spotify-automation-bot'
-    },
-    'headline-crawler': {
-        title: 'headline-crawler',
-        description: 'A web crawler that navigates and tracks news headlines. Uses web scraping techniques and data collection methods.',
-        reflection: '',
-        link: 'https://github.com/yanbmia/headline-crawler'
-    },
-    'weather-packed': {
-        title: 'weather-packed',
-        description: 'An application that utilizes weather API data provides personalized packing recommendations based on destination and travel dates.',
-        reflection: '',
-        link: 'https://github.com/yanbmia/weather-packed'
     },
     'experimenting-microgpt': {
         title: 'experimenting-microgpt',

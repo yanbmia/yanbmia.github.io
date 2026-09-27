@@ -321,11 +321,11 @@ window.chatbotQA = [
             "portfolio",
             "what have u built"
         ],
-        answer: "airbnb-albany-pricing, social-data-portfolio, proximity, modified-tiktok-link, etc... Click any card in the project section to see more!",
+        answer: "airbnb-albany-pricing, algo-backtester, social-data-portfolio, proximity, modified-tiktok-link, etc... Click any card in the project section to see more!",
         followUps: [
             "what's the airbnb project?",
-            "what's the proximity project?",
-            "what's the social-data-portfolio project?"
+            "what's the algo-backtester project?",
+            "what's the proximity project?"
         ]
     },
     {
@@ -340,8 +340,25 @@ window.chatbotQA = [
         ],
         answer: "It's an ML pipeline to predict Airbnb booking probability and recommend a competitive nightly price for listings in Albany, NY. The data was trained on 1.66M real calendar-day records from Inside Airbnb. The interesting part was the data integrity work: because it's time-series, I used chronological train/test splits instead of random splits, and caught a leaky neighborhood-occupancy feature mid-build that would've inflated accuracy. Fixed it with K-fold target encoding.",
         followUps: [
-            "what's the proximity project?",
+            "what's the algo-backtester project?",
             "what are your data skills?"
+        ]
+    },
+    {
+        phrases: [
+            "what's the algo-backtester project",
+            "tell me about algo-backtester",
+            "the backtesting project",
+            "the trading project",
+            "algo backtester",
+            "have you built a trading strategy",
+            "the moving average project",
+            "the sma crossover project"
+        ],
+        answer: "A daily backtesting engine I built from scratch in Python to answer one question: does a 50/200-day moving-average crossover beat just holding SPY? Over 2004-2024, the answer was no. Buy-and-hold won on return (10.6% vs. 9.2% CAGR), though the crossover took meaningfully less risk (13.5% vs. 19.0% volatility, a -33.7% vs. -55.2% max drawdown). The real point of the project was making it structurally hard to leak future data into a decision, since that's the mistake that quietly makes backtests look better than they are.",
+        followUps: [
+            "what's the airbnb project?",
+            "what's the social-data-portfolio project?"
         ]
     },
     {
@@ -399,22 +416,8 @@ window.chatbotQA = [
         ],
         answer: "A tool to watch TikTok links without the app. I built it after deleting TikTok but I was still getting sent Tiktok videos from friends. I wanted to view those individual videos without reinstalling the app.",
         followUps: [
-            "what's the headline-crawler project?",
+            "what's the cooking-p5 project?",
             "what are your dev skills?"
-        ]
-    },
-    {
-        phrases: [
-            "what's the headline-crawler project",
-            "the news scraper",
-            "the web crawler",
-            "the scraping project",
-            "headline crawler"
-        ],
-        answer: "Web crawler that scrapes and tracks news headlines. The scraping works, but the bigger goal is compiling it into a single database for analysis, which is still in progress.",
-        followUps: [
-            "what's the modified-tiktok project?",
-            "what are your data skills?"
         ]
     },
     {
@@ -442,33 +445,6 @@ window.chatbotQA = [
             "what are your hobbies?"
         ]
     },
-    {
-        phrases: [
-            "what's the spotify bot",
-            "spotify-automation-bot",
-            "the spotify project",
-            "spotify"
-        ],
-        answer: "An automation bot to streamline following artists on Spotify.",
-        followUps: [
-            "what's weather-packed?",
-            "what are your dev skills?"
-        ]
-    },
-    {
-        phrases: [
-            "what's weather-packed",
-            "the weather app",
-            "the packing app",
-            "weather packed"
-        ],
-        answer: "App that uses weather API data to give personalized packing recommendations based on your destination and travel dates.",
-        followUps: [
-            "what's the spotify bot?",
-            "what tools do you use?"
-        ]
-    },
-
     // ------------------------------------------------------- career / hiring
     {
         phrases: [
